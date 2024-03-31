@@ -1,0 +1,101 @@
+@import 'variables.styl'
+
+nav
+    /* background-color:var(--clr-sry); */
+    /* background-color:rgba(108,108,108,.5); */
+    background-color rgba(0,0,0,.7)
+    backdrop-filter blur(5px)    
+    width 100%
+    height var(--height-nav)
+    display flex
+    position fixed
+    z-index 99    
+    /* box-shadow: 0 4px 12px -12px gray; */
+    /* box-shadow:inset 0px -28px 26px -26px rgba(6,216,137,1); */
+
+nav .logo
+    display flex
+    justify-content center
+    align-items center
+    width 10%
+
+nav .logo svg
+    width 40px
+    height 40px
+
+nav .logo svg .rotate            
+    transform-origin center center
+    transition all .5s
+
+nav .logo svg:hover .rotate
+    transform rotate(180deg)
+    
+nav .logo .change
+    transition all .5s
+
+nav .enlaces 
+    width 80%
+    display flex
+    justify-content center
+    align-items center
+
+nav .enlaces a
+    display flex
+    align-items center
+    justify-content center
+    font-size 1.1em
+    font-weight 900
+    font-family Mori
+    color #FFF
+    text-transform uppercase
+    position relative
+    padding 5px 20px
+
+nav .enlaces a:hover
+    color var(--clr-vrd2)
+
+nav .enlaces a::before
+    background var(--clr-vrd2)
+    content ''
+    width 0px
+    /* de izquierda a derecha*/
+    /*left:10px*/
+    left 50%x
+    height 2.5px
+    position absolute
+    bottom -1px
+    transition all .7s
+
+nav .enlaces a:hover::before
+    width calc(100%)
+    /* de izquierda a derecha*/
+    /* width:calc(100% - 20px); */
+
+nav .enlaces .checked a::before
+    background linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(251,251,251,1) 50%, rgba(76,76,241,1) 50%)
+
+nav .profile
+    display flex
+    justify-content center
+    align-items center
+    width 10%
+
+
+/*
+nav svg:hover .rotate.curva1{ } 
+*/
+/* 
+nav svg:hover .rotate.curva2
+    fill:#ffd42a !important; 
+*/
+
+/*
+nav svg:hover .rotate.curva3{
+    fill:#5555ff !important;
+}
+*/
+/*
+nav svg:hover .change{
+    fill:#000;
+}
+*/

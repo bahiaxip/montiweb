@@ -41,6 +41,8 @@ a
     width 100%
     display flex
     justify-content flex-star
+.center
+    text-align center
 
 /* optimizar y revisar estos section ... .title */
 section .a .title span
@@ -119,7 +121,7 @@ section .a .title h3 span, .title2 h3 span
 .box_features h3
     margin 20px 0
     font-size 20px
-    font-family Mori
+    font-family Poppins
     transition color .5s linear;
     z-index 1;  
     
@@ -130,7 +132,7 @@ section .a .title h3 span, .title2 h3 span
     color #FFF
 
 .box_features:hover h3
-    color #FFF
+    color color18
 
 
 .box_features .social-cred
@@ -138,12 +140,12 @@ section .a .title h3 span, .title2 h3 span
     position relative
     
 
-
 .box_features .social-cred .social-text
     opacity 0
     transform translate3d(0px, 100%, 0px) scale3d(1,1,1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 7deg)
     z-index 1
     transition all .5s linear
+    
     /* transform-style:preserve-3d; */
    
 .text h3
@@ -229,7 +231,7 @@ section h3{
     justify-content: center;
     font-size:50px;
     color:var(--clr-pry);
-    letter-spacing:2px;
+    /* letter-spacing:2px; */
     
 }
 section.column{
@@ -293,20 +295,110 @@ section h4
     
 section .ctner
     width 100%
-    min-height 500px
+    min-height 450px
+    position relative
+    display flex
+    flex-flow column nowrap
+section .ctner.white
+    /* &::before
+        content ''
+        background-image url('../img/fondo_setup.jpg')
+        background-size cover 
+        background-repeat no-repeat
+        background-position center
+        position absolute
+        width 100%
+        height 100%
+        opacity 1
+        clip-path:circle(59% at 92% 50%); */
+        
+    &::after
+        content ''
+        /* background rgba(0,0,0,1) */
+        background-color #000
+        width 100%;
+        height 100%
+        position absolute
+        top 0
+        clip-path:circle(59.2% at 92% 50%);
+        
 section .sct_title
+    position relative
     margin 20px auto
     display flex
     justify-content center
+    z-index 2
+    color #FFF
 
 section .center100
+    position relative    
     width 100%
     display flex
     justify-content center
+    color #FFF
+    
 section .cnt80
+    height 60%
     width 80%
     display flex
-    justify-content: space-around
+    justify-content: flex-end
+    
+    ul
+        list-style none
+        --icon-space 1.3em
+        padding 0
+    ul li
+        padding-left var(--icon-space)
+        margin 0
+        display flex
+        align-items center
+        &::before
+            content '\2714'
+            width var(--icon-space)
+            color color18
+            font-size 1.2em
+            
+            
+            
+section .cnt50.image
+    width 55%
+    z-index 0
+    .background
+        width 100%
+        min-height 450px
+        background url('../img/entrepreneur.jpg')
+        background-size cover
+        background-position center
+section .cnt50    
+    display block
+    width 50%
+    justify-content center
+    position relative
+    z-index 2
+
+    h4
+        font-size:clamp(22px,2.5vw,30px);
+        text-align center
+        margin 10px 0
+        color white
+    .button
+        display flex
+        justify-content center
+
+        button
+            padding 10px 15px
+            border color18 1px solid
+            border-radius 7px
+            font-size 18px
+            background-color greyboot
+            color #FFF
+            cursor pointer
+.mauto
+    margin auto
+section h5
+    font-size 20px
+    font-family Poppins
+    line-height 40px
 section .center100 .card
     width 300px
     height 300px
@@ -337,16 +429,17 @@ section .center100 .card
     
     
 }
-.box .webdesign{
-    align-items:center;
+.box .webdesign
+    align-items center
     /* height:25%; */
-    height:100px;
-    display:flex;    
-    justify-content: center;
-    
+    height 60px
+    display flex
+    justify-content center
+    margin-top 40px
     /* text-transform:uppercase; */
-    width:100%;
-}
+    width 100%
+    
+
 .box .webdesign h3{
     /* background-color:var(--clr-pry); */
     color:var(--clr-pry);
@@ -355,17 +448,18 @@ section .center100 .card
     font-family:Mori;
     /* text-shadow: 1px 1px 15px #000; */
     border-radius:10px;
-    font-size: 50px;
+    font-size: 40px;
 }
 
-.box .webdetail2{
-    display:flex;
-    height:75%;
-    width:100%;
-    justify-content:space-evenly;
-    flex-flow:row wrap;
-    margin:20px;
-}
+.box .webdetail2
+    align-items center
+    display flex
+    height 75%
+    width 100%
+    justify-content space-evenly
+    flex-flow row wrap
+    margin 20px
+
 .box .webdetail2 h3{
     font-size:20px;
 }

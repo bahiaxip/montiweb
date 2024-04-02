@@ -54,7 +54,7 @@
         <!-- <span>ontiweb</span> -->
     </div>
     <div class="enlaces">
-        <a href="index.html">Inicio</a>
+        <a href="/">Inicio</a>
         <a href="services.html" onclick="hola()">Servicios</a>
         <a href="">Blog</a>
         <a href="">Contacto</a>

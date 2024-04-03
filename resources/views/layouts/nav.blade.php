@@ -55,7 +55,7 @@
     </div>
     <div class="enlaces">
         <a href="/">Inicio</a>
-        <a href="services.html" onclick="hola()">Servicios</a>
+        <a href="{{route('services')}}" onclick="hola()">Servicios</a>
         <a href="">Blog</a>
         <a href="">Contacto</a>
     </div>

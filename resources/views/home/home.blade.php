@@ -1,7 +1,9 @@
 @extends('layouts.app')
+
 @section('title','Inicio')
 
 @section('content')
+@include('layouts.header')
 <section class="column">
     <div class="ctner white">
         {{-- <div class="sct_title">
@@ -21,8 +23,8 @@
                     <div style="display:block">
                         <ul>
                             <li><h5>Diseño moderno y atractivo </h5></li>
-                            <li><h5>Tecnologías actuales</h5></li>
-                            <li><h5>Certificado SSL</h5></li>
+                            <li><h5>Últimas tecnologías</h5></li>
+                            <li><h5>Conexión segura</h5></li>
                             <li><h5>Adaptable a todos los dispositivos </h5></li>
                             {{-- <li><h5>Integración en redes sociales </h5></li> --}}
                             <li><h5>Soporte técnico</h5></li>
@@ -39,46 +41,29 @@
     </div>
 </section>
 <section>
-    <div class="box">
-        <!-- <h3>Servicio de aplicaciones web para iniciar o consolidarte en el mundo digital</h3> -->
-        <!-- <h3></h3> -->
+    <div class="ctner2 greylight">        
         <!-- <h3>Servicios de diseño y desarrollo a empresas y particulares</h3> -->
-        <div class="webdesign">
+
+        <div class="sct_title mtop40">
             <h3>Servicios de diseño web</h3>
-            {{--<h3>Nos adaptamos a tus necesidades</h3> --}}
-            {{-- <h3>¿Qué solución necesitas?</h3> --}}
-            <!-- <h4>¿Qué tipo de servicio necesitas?</h4> -->
-            <!-- <h4>Si necesitas una web, escalar uno existente o que tu sitio sea encontrado</h4> -->
-            <!-- <h3>Creando sitios web  
-                <span style="color:#37c871;margin:0 7px;"> elegantes </span> y 
-                <span style="color:#37c871;margin:0 7px;-webkit-text-stroke:1px #000;">atractivos</span>
-            </h3> -->
+            <!-- <h4>Si necesitas una web, escalar uno existente o que tu sitio sea encontrado</h4> -->            
             <!-- <h3>¿Las soluciones disponibles no satisfacen tus objetivos?</h3> -->
-            <!-- <h3>Necesitas un sitio web personalizado</h3> -->
-            <!-- <h3>Descubre la experiencia de un diseño personalizado</h3> -->
-            <!-- <h3>Desarrollamos tu espacio digital</h3> -->
-            <!-- <h3>Experiencias modernas y atractivas</h3> -->
-            <!-- <h3>Únete al universo digital</h3> -->
-            <!-- <h3>Déjanos llevarte al universo digital</h3>
-            <h3>Ayudamos a introducirte en el universo digital</h3> -->
         </div>
-        <div class="webdetail2" style="display:flex;">
-            <div class="box_features" style="">
+        <div class="boxes_services">
+            <div class="box_service" style="">
                 <img src="icons/iconos_web/wordpress.svg" alt="" >
                 <h3>Wordpress</h3>
                 <div class="social-cred">
                     <div class="social-text">Diseño con plantillas</div>
-
                 </div>
+                <div class="circle"></div>
+            </div>
                 <!-- <p>Información: En la actualidad la presencia en línea es fundamental para mostrar información sobre tí o tu negocio.</p>
                 <p>Promocionar: Promocionar productos o servicios</p>
                 <p>Económica: En comparación con otros medios de publicidad es una opción más económica</p>
                 <p>Disponibilidad: Disponible las 24 horas los 7 días de la semana</p>
                 <p>Accesibilidad: Es accesible desde cualquier lugar del planeta</p> -->
-                <div class="circle"></div>
-            </div>
-
-            <div class="box_features" style="">
+            <div class="box_service" style="">
                 <img src="icons/iconos_web/woocommerce-icon.svg" alt="" >
                 <h3>Ecommerce</h3>
                 <div class="social-cred">
@@ -87,7 +72,7 @@
                 <div class="circle"></div>
             </div>
 
-            <div class="box_features" style="">
+            <div class="box_service" style="">
                 <img src="icons/iconos_web/landing-page-web-design.svg" alt="" >
                 <h3>A medida</h3>
                 <div class="social-cred">
@@ -95,7 +80,7 @@
                 </div>
                 <div class="circle"></div>
             </div>
-            <div class="box_features" style="">
+            <div class="box_service" style="">
                 <img src="icons/iconos_web/browser-success.svg" alt="" >
                 <h3>Mantenimiento</h3>
                 <div class="social-cred">
@@ -103,7 +88,7 @@
                 </div>
                 <div class="circle"></div>
             </div>
-            <div class="box_features" style="">
+            <div class="box_service" style="">
                 <img src="icons/iconos_web/analytics.svg" alt="" >
                 <h3>Posicionamiento</h3>
                 <div class="social-cred">
@@ -126,14 +111,6 @@
             </div>
             <div class="text"></div>
         </div> -->
-        
-        <!--
-        <p>Analizamos los datos para comprender sus objetivos y su audiencia </p> -->
-        <!-- <h3>Moderno</h3>
-        <h3>Atractivo</h3>
-        <h3>Intuitivo</h3> -->
-        <!-- <h3>¿Necesitas un sitio web moderno y atractivo?</h3>
-        <h3 style="font-size:1.5rem;font-family:Mori;">¿Necesitas un diseño moderno y atractivo?</h3> -->
         <!-- <p>En un mundo interconectado y competitivo es necesario disponer de presencia en la red. Pero además es necesario que tu sitio sea:</p>
         <ul>
             <li>Moderno</li>(actualizado)
@@ -147,25 +124,165 @@
         <!-- <p>Un diseño de web inicial atraerá más usuarios</p> -->
     </div>
 </section>
+<!-- SECTION DE DESARROLLO WEB (FRONTEND, BACKEND, API REST, CHAT, PWA) -->
+
 <section class="column">
-    <div class="ctner greyboot">
-        <div class="sct_title">            
+    <div class="ctner black">
+        <div class="sct_title title_design">            
             <h4>Todos los sitios incluyen</h4>
         </div>
-        <div class="center100">
+        <div class="sct_content">
+            <div class="boxes_features" >
+                <div class="box_features mtop20">
+                    <div class="circle_anim_features">
+                        <div class="effect_circle"></div>
+                    </div>
+                    <div class="circle_icon_features">
+                        <div class="icon_feature"></div>
+                        {{-- <img src="{{asset('icons/responsive.svg')}}" alt="" style="width:32px;height:32px;"> --}}
+                    </div>
+                    <div class="title_features">
+                        <h4>RESPONSIVE</h4>                        
+                    </div>
+                    <div class="text_features">
+                        <p>Se adapta a cualquier dispositivo, ya sea smartphone o tablet</p>
+                    </div>
+                </div>
+                
+                <div class="box_features">
+                    <div class="circle_anim_features">
+                        <div class="effect_circle"></div>
+                    </div>
+                    <div class="circle_icon_features">
+                        <div class="icon_feature"></div>
+                        {{-- <img src="{{asset('icons/responsive.svg')}}" alt="" style="width:32px;height:32px;"> --}}
+                    </div>
+                    <div class="title_features">
+                        <h4>HOSTING Y DOMINIO</h4>                        
+                    </div>
+                    <div class="text_features">
+                        <p>Hospedaje y dominio incluido el primer año</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="box_features">
+                    <div class="circle_anim_features">
+                        <div class="effect_circle"></div>
+                    </div>
+                    <div class="circle_icon_features">
+                        <div class="icon_feature"></div>
+                        {{-- <img src="{{asset('icons/responsive.svg')}}" alt="" style="width:32px;height:32px;"> --}}
+                    </div>
+                    <div class="title_features">
+                        <h4>RGPD</h4>                        
+                    </div>
+                    <div class="text_features">
+                        <p>Adaptado al reglamento general de protección de datos</p>
+                    </div>
+                </div>                
+                
+                <div class="box_features">
+                    <div class="circle_anim_features">
+                        <div class="effect_circle"></div>
+                    </div>
+                    <div class="circle_icon_features">
+                        <div class="icon_feature"></div>
+                        {{-- <img src="{{asset('icons/responsive.svg')}}" alt="" style="width:32px;height:32px;"> --}}
+                    </div>
+                    <div class="title_features">
+                        <h4>SSL</h4>                        
+                    </div>
+                    <div class="text_features">
+                        <p>Certificado SSL estableciendo una comunicación cifrada</p>
+                    </div>
+                </div>
+                <div class="box_features">
+                    <div class="circle_anim_features">
+                        <div class="effect_circle"></div>
+                    </div>
+                    <div class="circle_icon_features">
+                        <div class="icon_feature"></div>
+                        {{-- <img src="{{asset('icons/responsive.svg')}}" alt="" style="width:32px;height:32px;"> --}}
+                    </div>
+                    <div class="title_features">
+                        <h4>SSL</h4>                        
+                    </div>
+                    <div class="text_features">
+                        <p>Certificado SSL estableciendo una comunicación cifrada</p>
+                    </div>
+                </div>
+                <div class="box_features">
+                    <div class="circle_anim_features">
+                        <div class="effect_circle"></div>
+                    </div>
+                    <div class="circle_icon_features">
+                        <div class="icon_feature"></div>
+                        {{-- <img src="{{asset('icons/responsive.svg')}}" alt="" style="width:32px;height:32px;"> --}}
+                    </div>
+                    <div class="title_features">
+                        <h4>SSL</h4>                        
+                    </div>
+                    <div class="text_features">
+                        <p>Certificado SSL estableciendo una comunicación cifrada</p>
+                    </div>
+                </div>
+                <div class="box_features">
+                    <div class="circle_anim_features">
+                        <div class="effect_circle"></div>
+                    </div>
+                    <div class="circle_icon_features">
+                        <div class="icon_feature"></div>
+                        {{-- <img src="{{asset('icons/responsive.svg')}}" alt="" style="width:32px;height:32px;"> --}}
+                    </div>
+                    <div class="title_features">
+                        <h4>SSL</h4>                        
+                    </div>
+                    <div class="text_features">
+                        <p>Certificado SSL estableciendo una comunicación cifrada</p>
+                    </div>
+                </div>
+                <div class="box_features">
+                    <div class="circle_anim_features">
+                        <div class="effect_circle"></div>
+                    </div>
+                    <div class="circle_icon_features">
+                        <div class="icon_feature"></div>
+                        {{-- <img src="{{asset('icons/responsive.svg')}}" alt="" style="width:32px;height:32px;"> --}}
+                    </div>
+                    <div class="title_features">
+                        <h4>SSL</h4>                        
+                    </div>
+                    <div class="text_features">
+                        <p>Certificado SSL estableciendo una comunicación cifrada</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section class="column">
+    <div class="ctner greyboot">
+        <div class="sct_title title_design">
+            <h4>Trabajos recientes</h4>
+        </div>
+        <div class="sct_content" >
+            <div>
+
+            </div>
 
         </div>
     </div>
 </section>
-
-<section class="column a background">
+{{-- <section class="column a background">
         
     <div class="title">
         <h2>¿Las soluciones disponibles no satisfacen tus objetivos?</h2>
         <h2>Necesitas un diseño web personalizado</h2>
         
     </div>
-    <div class="box background">
+    <div class="ctner2 background">
         <div class="card cwhite">
             <div class="icon">
                 <img src="icons/responsive-devices_white.svg" alt="">
@@ -209,14 +326,14 @@
             <div class="image"></div>
         </div>
     </div> -->
-</section>
+</section> --}}
 <section class="column">
     <div class="ctner white">
-        <div class="sct_title">
+        <div class="sct_title title_design">
             <h4>Todos los sitios incluyen</h4>
         </div>
         <div class="center100 ">
-            <div class="cnt80">
+            {{-- <div class="cnt80">
                 <div class="card black">
                     <div class="icon">
                         <img src="icons/responsive-devices_white.svg" alt="">
@@ -256,7 +373,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>

@@ -22,4 +22,5 @@ use App\Http\Controllers\HomeController;
 }); */
 
 Route::get('/',[HomeController::class,'home'])->name('home');
+Route::get('/services',[HomeController::class,'services'])->name('services');
 

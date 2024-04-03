@@ -18,7 +18,7 @@
 <body>
     <main>
         @include('layouts.nav')
-        @include('layouts.header')
+        
         @yield('content')
     </main>
 

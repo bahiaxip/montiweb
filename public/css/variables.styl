@@ -34,12 +34,76 @@ color15 = #b4ffdb
 color16 = #d3ffda
 color17 = #18D26E
 color18 = #37c871;
+color19 = #151519;
+color20 = #0d1011;
+color21 = #212128;
+color22 = #B1B3BC;
+color23 = #545454;
+color24 = #ECF0F3;
+
 greyboot = #212529 //rgb(33,37,41)
 rgba2 = rgba(0,178,146,1)
 rgba17 = rgba(24,210,110,1)
 rgba1 = rgb(72,97,255)
 main = #161616
-    
+
+/* BACKGROUNDS */
+.greyboot
+    background-color greyboot
+.greylight
+    background-color var(--back-gray)
+.black
+    background-color #000
+.white
+    background-color #FFF
+
+    /* COLORS */
+.cwhite
+    color #fff
+.cblack
+    color #000
+.dflex
+    display flex
+.dblock
+    display block
+.bold600
+    font-weight 600
+
+
+.h80
+    height 80%
+
+/* ALIGN AND MARGINS */
+.center
+    text-align center
+.center50
+    width 50%
+    display flex
+    justify-content center
+.center70
+    position relative
+    width 70%
+    display flex
+    justify-content center
+    height 100%
+.mtop40
+    margin-top 40px
+.mtop20
+    margin-top 20px
+.mauto
+    margin auto
+.m20
+    margin 20px
+.ptop40
+    padding-top 40px
+
+
+html
+    scroll-behavior smooth
+
+    /* FIN ALIGN AND MARGINS */
+
+    /* FONT-FACE */
 @font-face{
     font-family: Ecliptic_BRK;
     src: url(../fonts/Ecliptic_BRK.ttf);
@@ -85,3 +149,4 @@ main = #161616
     font-family:Gilroy;
     src: url(../fonts/gilroy/Gilroy-Regular.ttf);
 }
+    /* FIN FONT-FACE */

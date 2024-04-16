@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="{{asset('css/header.css')}}">
     <link rel="stylesheet" href="{{asset('css/nav.css')}}">
     <link rel="stylesheet" href="{{asset('css/estilos.css')}}">
+    <link rel="stylesheet" href="{{asset('css/services.css')}}">
     <link rel="stylesheet" href="{{asset('css/estilos_provi.css')}}">
+    <link rel="stylesheet" href="{{asset('css/footer.css')}}">
     
     <script src="{{asset('js/anime.min.js')}}"></script>
     <script src="{{asset('js/bundle.js')}}"></script>
-    <script src="{{asset('js/funciones.js')}}"></script>
+    
 </head>
 <body>
     <main>
@@ -21,7 +23,7 @@
         
         @yield('content')
     </main>
-
+    <script src="{{asset('js/funciones.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="{{asset('js/animation_gsap.js')}}"></script>
 </body>

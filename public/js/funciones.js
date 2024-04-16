@@ -16,6 +16,7 @@
     //     }
     // })
 }) */
+
 function animation(){
     const text = document.querySelector('.text.animejs');
     console.log("cargado: ",text);
@@ -83,6 +84,7 @@ function animation(){
 function hol(){
     hola();
 }
+const route = document.getElementsByName('route_name')[0].getAttribute('content');
 window.addEventListener('load', ()=>{
     // for(let i= 1; i <= 100; i++){{{{
     //     let box = document.createElement('div');
@@ -91,11 +93,29 @@ window.addEventListener('load', ()=>{
     //     document.querySelector('.text').appendChild(box);
     // }}}}
     // console.log("cargado")
-    animation();
+    console.log("route: ",route)
+    if(route == 'home'){
+        animation();
+        caroussel();
+    }else if(route == 'services'){
+        caroussel2()
+    }
+
+    
+    
 })
 // window.addEventListener('resize', () => {
 //     animation();
 // })
-window.addEventListener('click', (event) => {
+/* window.addEventListener('click', (event) => {
     console.log(event.clientX)
-})
+}) */
+
+/* let prev,next;
+
+function moveScroll(sel,type){
+    console.log("sel: ",sel)
+    console.log("type: ",type)
+    let carousel = document.querySelector('.slider');
+    carousel.scrollLeft += 390;
+} */

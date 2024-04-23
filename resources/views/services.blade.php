@@ -4,6 +4,7 @@
 <div class="services">
     
     <section class="init">
+        <div class="backtitle">Servicios</div>
         {{-- <div class="background1">
             <div class="gradient left"></div>
             <div class="gradient right"></div>
@@ -234,24 +235,19 @@
         <div class="center70">
             <div class="ctner ">
                 <h2 class="center mtop40 cwhite">Desarrollo web</h2>
-                <div class="center100">
-                    <div class="detail">
+                <div class="center100 py40">
+                    <div class="detail description">
                         <div class="text">
-                            <h2>Un desarrollo adecuado y optimizado es esencial</h2>
-                            <p class="mtop20">
-                                Una eficiente gestión de los datos, una estructura correcta y un código optimizado es algo vital en un sitio web para obtener un excelente rendimiento. ¿Necesitas integrar un chat en tu página, una implementación de seguridad, incluir un sistema de gestión de clientes (CRM) totalmente personalizado en tu plataforma? Montiweb ofrece soluciones específicas de desarrollo web adaptándose a tus necesidades.
+                            {{-- <h2>Un desarrollo adecuado y optimizado es esencial</h2> --}}
+                            <h2>Un desarrollo de calidad y optimizado es esencial</h2>
+                            <p class="mtop20">                                
+                                Una estructura adecuada, un código optimizado y compatibilidad en los distintos navegadores es algo vital en un sitio web para obtener un excelente rendimiento. Montiweb ofrece desarrollo de software personalizado mediante el uso de frameworks y herramientas basadas en lenguajes de desarrollo web como HTML, CSS, PHP, JavaScript y SQL.
                             </p>
                         </div>
                     </div>
-                    <div class="detail">
-                        <div class="image">
+                    <div class="detail image">
+                        <div class="image_development">
                             
-                            <svg id="10015.io" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill-rule="evenodd" clip-rule="evenodd">
-                                <clipPath id="mask">
-                                    <path fill="#474bff" d="M399.5,288Q372,336,334.5,376Q297,416,234.5,432.5Q172,449,124,404Q76,359,85,299.5Q94,240,86.5,181.5Q79,123,128.5,86.5Q178,50,234.5,67Q291,84,328.5,116.5Q366,149,396.5,194.5Q427,240,399.5,288Z" />
-                                </clipPath>
-                                <image href="{{asset('img/laptop.jpg')}}" alt="" width="100%" height="100%" clip-path="url(#mask)" preserveAspectRatio="xMidYMid slice"/>
-                            </svg>
                         </div>
                     </div>
                 </div>
@@ -309,20 +305,104 @@
     </section>
     
     <section class="webseo" id="webseo">
-        <div class="center70">
+        <div class="backbox"></div>
+        <div class="center70 ptop50">
             <div class="ctner">
                 <h2 class="center cwhite">Optimización SEO</h2>
                 <div class="center100">
-                    <div class="cnt50">
-                        <p>Análisis de palabras clave</p>
-                        <p>Análisis de competencia</p>
-                        <p>Metadatos estructurados</p>
-                        <p>Análisis Google Analytics</p>
-                        <p>Herramientas SemRush</p>
-                        
+                    <div class="detail filter" > 
+                        <div class="text">
+                            {{-- <h2>Un desarrollo adecuado y optimizado es esencial</h2> --}}
+                            <h2>Impulsa tu presencia online y atrae más visitantes con servicios estratégicos</h2>
+                            <p class="mtop20">
+                                Tu sitio web puede ser maravillos pero... ¿Existes?. ¿Deseas más clientes? ¿Más llamadas? Es necesaria una correcta optimización SEO para posicionarte en los buscadores y que la gente te encuentre.
+                            </p>
+                        </div>
                     </div>
-                    <div class="cnt50"></div>
+                    
+                    
                 </div>
+                <div class="features_seo" >
+                    
+                        <div class="featureseo">
+                            <div class="top">
+                                <div class="icon"><img src="../icons/seo/analisis.svg" alt=""></div>
+                            </div>
+                            
+                            <div class="title">
+                                <h5>Auditoría</h5>
+                            </div>
+                            <p>Revisión en profundidad de tu sitio web identificando posibles áreas de mejora</p>                            
+                        </div>
+                        <div class="featureseo">
+                            <div class="top">
+                                <div class="icon">
+                                    <img src="../icons/seo/word-wrap.svg" alt="">
+                                </div>
+                            </div>                                
+                            <div class="title">
+                                <h5>Análisis de palabras clave</h5>
+                            </div>
+                            
+                            <p>Investación avanzada de palabras clave relevantes para tu web</p>
+                        </div>
+                        <div class="featureseo">
+                            <div class="top">
+                                <div class="icon">
+                                    <img src="../icons/seo/code.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="title">
+                                <h5>Metadatos estructurados</h5>
+                            </div>
+                            <p>Estructura del proyecto que facilita a los buscadores información precisa</p>
+                        </div>
+                        
+                        
+                        {{-- <p>Análisis de competencia</p>
+                        <p>Análisis de competencia directa</p> --}}
+                        <div class="featureseo">
+                            <div class="top">
+                                <div class="icon">
+                                    <img src="../icons/seo/seo_onpage.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="title">
+                                <h5>Optimización OnPage</h5>
+                            </div>
+                            <p>Optimización de estructura y contenido obteniendo una indexación adecuada para los motores de búsqueda</p>
+                        </div>
+                        <div class="featureseo">
+                            <div class="top">
+                                <div class="icon">
+                                    <img src="../icons/seo/seo_performance.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="title">
+                                <h5>Análisis</h5>
+                            </div>                            
+                            <p>Anallizar el rendimiento de tu sitio web permite decidir estrategias basadas en el comportamiento de tus visitantes</p>
+                        </div>
+                        {{-- <p>Configuración y análisis de rendimiento de tu sitio web</p> --}}
+                        
+                        {{-- <p>Herramientas</p> --}}
+                        <div class="featureseo">
+                            <div class="top">
+                                <div class="icon">
+                                    <img src="../icons/seo/seo_local.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="title">
+                                <h5>SEO Local</h5>
+                            </div>
+                            
+                            <p>Optimización para motores de búsqueda a través de factores de proximidad</p>
+                        </div>
+                        
+                    
+                    
+                </div>
+                
             </div>
             
         </div>
@@ -331,7 +411,7 @@
     </section>
 </div>
 <footer>
-    <div class="wordpress white">
+    {{-- <div class="wordpress white">
         <div class="icon">
             <img src="icons/iconos_web/wordpress.svg" alt=""  style="width:200px;">                        
         </div>
@@ -358,15 +438,15 @@
         </div>
         
         
-        {{-- <p>
+        <!--<p>
             Wordpress es el CMS (sistema de gestión de contenidos) más popular del mercado, ocupando más del 40% de todos los sitios web del mundo. Aunque en sus orígenes fue destinado a páginas web de noticias y blogs, ha evolucionado de forma considerable a través de su sistema de plugins llegando a poder crear cualquier tienda o sitio web complejo. Wordpress ha sido seleccionado por grandes empresas como Sony, Meta o New York Times, sin embargo, existen otras opciones más recomendables para proyectos que requieren una mayor personalización y escalabilidad.
              Algunas de las características principales son 
             <span>su interfaz intuitiva que facilita la administración del sitio con unos conocimientos básicos en diseño y desarrollo web.</span>
             <span>Su sistema de plantillas que permite modificar el aspecto visual del sitio agilizando y disminuyendo el coste mediante el acceso a numerosas plantillas gratuitas y de bajo coste </span>
             <span>Su sistema de plugins que facilita la integración a múltiples opciones y funcionalidades con acceso a muy bajo coste apoyado por una amplia comunidad en la red</span>
             
-        </p> --}}
-    </div>
+        </p> -->
+    </div> --}}
     @include('layouts.footer')
 </footer>
 <script src="../js/carousel.js"></script>

@@ -6,6 +6,8 @@ let carousel,timeoutId;
 let divArrows;
 function caroussel(){
 
+
+
     //div carousel
     carousel = document.querySelector('.carousel');
     const arrowBtns = document.querySelectorAll(".sct_content button");
@@ -53,6 +55,7 @@ function caroussel(){
     console.log("cardPerView: ",cardPerView)
     carousel.addEventListener('scroll',infiniteScroll);
     //autoPlay();
+
 }
 
 function botones(buttons,sel){
@@ -116,11 +119,15 @@ function caroussel2(){
 
     carousel.classList.add("no-transition");
 
-    carousel.scrollLeft = carousel.offsetWidth;
-    carousel.classList.remove("no-transition");
+    //requiere un setTimeout pk genera un conflicto con el scroll entre secciones al establecer scrollLeft.
+    setTimeout(()=>{
+        carousel.scrollLeft = carousel.offsetWidth;
+        carousel.classList.remove("no-transition");
 
-    console.log("cardPerView: ",cardPerView)
-    carousel.addEventListener('scroll',infiniteScroll);
+        console.log("cardPerView: ",cardPerView)
+        carousel.addEventListener('scroll',infiniteScroll);
     //autoPlay();
+    },2000)
+    
 }
 

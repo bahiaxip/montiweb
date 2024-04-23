@@ -30,7 +30,30 @@ html
         flex-flow column
         position relative
         z-index 1
-        
+        &::before
+            content ''
+            background-image url('../img/fondo/tapiz_23.jpg')
+            background-size cover
+            width 100%
+            height 100%
+            position absolute
+            opacity .1
+
+        .backtitle
+            width 100%
+            height 100%            
+            font-size 200px
+            position absolute
+            
+            display flex
+            justify-content: center
+            align-items end
+            color transparent
+            letter-spacing 2px
+            -webkit-text-stroke-width 2px
+            /* -webkit-text-stroke-color rgba(24,210,110,.1) */
+            -webkit-text-stroke-color rgba(255,255,255,.1)
+
         /* .filigrana
             width 100%
             height 100%
@@ -256,18 +279,28 @@ html
                                     width 100%
                                     background-color color18 */
     /* servicio de diseño web */
-    section.webdesign,section.webdevelopment
-        padding-top 20px
+        
+
+    section.webdesign,section.webdevelopment, section.webseo
+        padding-top 50px
         .title
             width 100%
             display flex
             justify-content center
+        .detail.description
+            margin-right -100px
+            z-index 2
+            background-color #000
+            padding 40px
+        .detail.image
+            min-height 550px
         .detail
             align-items center
             width 50%
             display flex
             justify-content center
-
+            min-width 400px
+        
             .text
                 width 80%
                 display flex
@@ -287,8 +320,24 @@ html
                     width 600px
                     transition transform 0.2s ease
                     &:hover
-                        transform scale(1.1)                
-            
+                        transform scale(1.1)
+
+            .image_development
+                background url(../img/development.jpg)
+                background-size cover
+                width 700px
+                min-height 300px
+                height 450px
+                min-width 300px
+                position absolute
+                z-index 1
+                
+
+                
+                
+                    
+
+                
         
         .wordpress, .woocommerce, .custom
             align-items center
@@ -364,8 +413,115 @@ html
                     width 64px
                     height 64px
     section.webseo
+        position relative
+        padding 0 !important
+        &::before
+            content ''
+            background url('../img/analytics.jpg')
+            background-size cover
+            background-position bottom
+            width 100%
+            position absolute
+            height 100%
+            opacity .3
+            
+        .detail.filter
+            background-color rgba(0,0,0,.2)
+            backdrop-filter blur(10px)
+            padding 30px 0
         .detail
             color #FFF
+        
+        .features_seo
+            
+            border-top-left-radius 25px
+            border-top-right-radius 25px
+            display flex
+            margin-top 20px
+            width 100%
+            flex-flow row wrap
+            justify-content: center
+            padding 30px 10px
+            
+            .featureseo
+                /* background-color:#FFF */
+                /* background-color rgba(0,0,0,.2) */
+                background-color color20
+                /* background-color rgba(0,0,0,1) */
+                backdrop-filter blur(10px)
+                border-radius 10px                
+                color #FFF
+                margin 20px
+                min-width 200px
+                height 230px
+                overflow hidden
+                transition all .3s
+                width 300px
+                &:hover
+                    background-color rgba(0,0,0,.2)
+                    .top                        
+                        .icon
+                            align-items flex-start
+                            img,svg                                
+                                transform scale(0.8)
+                    .title 
+                        h5
+                            transform translateY(-40px)
+                            color color18
+                    p
+                        bottom 15px
+                .top
+                    align-items center
+                    
+                    width 100%
+                    height 50%
+                    display flex
+                    justify-content center
+                    padding 10px
+                    .icon
+                        /* background-color color18 */
+                        /* border #FFF 1px solid */
+                        border-radius 50%
+                        display flex
+                        align-items center
+                        justify-content center
+                        height 100px
+                        padding 10px 0
+                        width 100px
+
+                        img,svg
+                            width 50px 
+                            height 50px
+                            stroke #FFF
+                            transition all .3s ease
+                        
+                .title
+                    
+                    font-size 20px
+                    display flex
+                    height 50%
+                    justify-content center
+
+                    width 100%
+                    h5
+                        color #FFF
+                        font-size 20px
+                        position relative
+                        transition all .3s ease
+                        user-select none
+                p
+                    position absolute
+                    bottom -80%
+                    font-size 15px
+                    color color24
+                    padding 0 15px
+                    text-align justify
+                    transition all .3s ease
+                    user-select none
+
+
+
+
 /* fin servicio de desarrollo web */
     /* section.webseo */
 

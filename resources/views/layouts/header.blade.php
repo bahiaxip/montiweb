@@ -70,7 +70,7 @@
                     </div>
                     <div class="title">
                         <h3>OPTIMIZACIÓN SEO</h3>
-                        <a href="/services#webseo" class="button"><span class="back"></span><span class="text_btn">Leer Más</span></a>
+                        <a href="/services1" class="button"><span class="back"></span><span class="text_btn">Leer Más</span></a>
                     </div>
                 </div>
             </div>

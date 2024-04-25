@@ -77,187 +77,66 @@ header .image::after
     height 50vh
     width 100%
     min-height 300px
-
-/* boxes */
-.boxes
+.textrotate
     width 100%
     height 100%
     display flex
-    justify-content space-evenly
-    flex-flow row wrap
-    gap 20px
-    z-index 3
-    min-height 330px
-    padding 30px 0
-    .box.design .icon img                
-        width 65px
-        height 65px
-    .box.development .icon img
-        width 85px
-        height 85px
-    .box.seo .icon img
-        width 95px
-        height 95px
-    .box
-        width 230px
-        height 280px
-        background-color #000
-        border-radius 8px
-        position relative
-        overflow hidden
-        /* box-shadow 0 0 15px color8 */
-        box-shadow 0 0 10px color23
-    .box:hover
-        &::before,&::after
-            opacity 1
-        /* .box2
-            &::before,&::after
-                opacity 1 */
-        .content .icon .box_svg
-            width 70px
-            height 70px
-            background-color #000
-            img
-                width 40px
-                height 40px
-        .content .title h3
-            transform translateY(-20px)
-        .content .title .button
-            transform translateY(0)
-            
-        
-
-    .box::before
-        content ''
-        position absolute
-        top -50%
-        left -50%
-        width 230px
-        height 280px
-        background linear-gradient(0deg,transparent,transparent,color18,color18,color18)
-        z-index 1
-        transform-origin bottom right
-        animation animate 6s linear infinite
-        opacity 0
-
-    .box::after
-        content ''
-        position absolute
-        top -50%
-        left -50%
-        width 230px
-        height 280px
-        background linear-gradient(0deg,transparent,transparent,color18,color18,color18)
-        z-index 1
-        transform-origin bottom right
-        animation animate 6s linear infinite
-        animation-delay -3s 
-        opacity 0    
-
-    .content
-        position: absolute
-        inset 4px
-        background-color #222
-        /* padding 50px 40px */
-        border-radius 8px
-        z-index 2
-        display flex
-        overflow hidden
-        /* justify-content: center */
-        flex-direction column
-
-        .icon
-            padding-top 10px
-            height 50%
-            display flex
-            align-items center
-            justify-content: center
-            .box_svg
-                border-radius 50%
-                display flex
-                justify-content center
-                align-items center
-                width 115px
-                height 115px
-                transition all .2s ease .1s
-                img
-                    transition all .2s ease .1s
-
-        .title            
-            align-items center
-            display flex
-            flex-direction column
-            justify-content: space-evenly
-            height 50%
-            
-            width 100%
-            
-            h3
-                transform translateY(20px)
-                color #FFF
-                font-family Poppins
-                transition all .2s ease .1s
-        
-            .button
-                font-family Poppins
-                /* padding 8px 15px */
-                font-size 14px
-                background rgba(255,255,255, .2)
-                
-                border #000 1px solid
-                box-shadow  0 0 5px color9
-                border-radius 8px
-                color rgba(255,255,255,.8)
-                font-weight 600
-                letter-spacing 1px
-                cursor pointer
-                position relative
-                z-index 1
-                width 100px
-                height 35px
-                display flex
-                transform translateY(100px)
-                transition all .3s ease
-                span.back
-                    border-radius 8px
-                    position absolute
-                    width 0
-                    height 100%
-                    top 0
-                    left 0
-                    background-color #000
-                    z-index 1
-                    transition width .5s linear
-                span.text_btn
-                    width 100%
-                    height 100%
-                    display flex
-                    align-items center
-                    justify-content: center
-                    background transparent
-                    z-index 2
-                &:hover
-                    span.back
-                        width 100%
-                    box-shadow  0 0 10px color9
-                                
-                            /* span.text_btn
-                                position absolute
-                                width 100%
-                                height 100%
+    justify-content: center
+    align-items center
+    position absolute
+.rotating-text{
+    
+    font-weight:bold;
+    font-size:60px;
+    color:#FFF;
+    width 50%
+    transform:translateX(-130px) translateY(50px);
+    
+}
+.rotating-text p{
+    display: inline-flex;
+    margin:0;
+    vertical-align: top;
+}
 
 
-                                &&::before
-                                    background-color color18
-                                    content ''
-                                    width 0
-                                &::after
-                                    content ''
-                                    width 100%
-                                    background-color color18 */
+.rotating-text p .word{
+    position: absolute;
+    display:flex;
+    opacity:0;
+}
+.rotating-text p .word .letter{
+    font-family:Poppins;
+    font-weight: 800;
+    transform-origin: center center 25px;
+}
+.rotating-text p .word .letter.out{
+    transform: rotateX(90deg);
+    transition:0.32s cubic-bezier(0.6,0,0.7,0.2);
+}
+.rotating-text p .word .letter.in{
+    transition:0.8s ease;
+}
 
-
-/* fin boxes */
+.rotating-text p .word .letter.behind{
+    transform: rotateX(-90deg);
+}
+.w-1{
+    
+    color:#e74c3c;
+}
+.w-2{
+    color:#8e44ad;
+}
+.w-3{
+    color:#3498db;
+}
+.w-4{
+    color:#28cc71;
+}
+.w-5{
+    color:#f1c40f;
+}
 
 /* .skills2
     margin 20px auto 0px auto

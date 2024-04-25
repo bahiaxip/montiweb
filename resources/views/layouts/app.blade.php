@@ -18,6 +18,7 @@
     
 </head>
 <body>
+    <div class="cursor "></div>
     <main>
         @include('layouts.nav')
         

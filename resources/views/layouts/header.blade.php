@@ -26,55 +26,27 @@
                 <!-- <p style="color:white">Cuando las soluciones disponibles no satisfacen tus objetivos necesitas un sitio web personalizado.</p> -->
                     
                 <!-- </div>  -->
+                <div class="textrotate">
+                    <div class="rotating-text">
+                        {{-- <p>Servicios de </p> --}}
+                        <p>
+                            {{-- <span class="word w-1">Diseño&nbsp;&nbsp;web</span>
+                            <span class="word w-2">Desarrollo&nbsp;&nbsp;web</span>
+                            <span class="word w-3">Optimización&nbsp;&nbsp;seo</span>
+                            <span class="word w-4">Mantenimiento&nbsp;&nbsp;web</span> --}}
+                            {{-- <span class="word w-5">interesting</span> --}}
+                            <span class="word w-1">Páginas&nbsp;&nbsp;web</span>
+                            <span class="word w-2">Desarrollo&nbsp;&nbsp;de&nbsp;&nbsp;software</span>
+                            <span class="word w-3">Optimización&nbsp;&nbsp;seo</span>
+                            <span class="word w-4">Mantenimiento&nbsp;&nbsp;web</span>
+                        </p>
+                        
+                    </div>
+                </div>
                 
             </div>
         </div>
-        <div class="boxes">
-            <div class="box design">
-                {{-- <span class="empty_line"></span> --}}
-                <div class="content">
-                    <div class="icon">
-                        <div class="box_svg">
-                            <img src="{{asset('icons/design.svg')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="title">
-                        <h3>DISEÑO WEB</h3>
-                        <a href="/services#webdesign" class="button"><span class="back"></span><span class="text_btn">Leer Más</span></a>
-                    </div>
-                </div>
-                
-
-            </div>
-            <div class="box development">
-                {{-- <span class="empty_line"></span> --}}
-                <div class="content">
-                    <div class="icon">
-                        <div class="box_svg">
-                            <img src="{{asset('icons/developing.svg')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="title">
-                        <h3>DESARROLLO WEB</h3>
-                        <a href="/services#webdevelopment" class="button"><span class="back"></span><span class="text_btn">Leer Más</span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="box seo">
-                {{-- <span class="empty_line"></span> --}}
-                <div class="content">
-                    <div class="icon">
-                        <div class="box_svg">
-                            <img src="{{asset('icons/optimize_seo.svg')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="title">
-                        <h3>OPTIMIZACIÓN SEO</h3>
-                        <a href="/services1" class="button"><span class="back"></span><span class="text_btn">Leer Más</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         {{-- <div class="skills2">
             <div class="box_skills1">
                 @include('home.skills1')

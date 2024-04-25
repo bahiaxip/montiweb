@@ -4,7 +4,7 @@
 <div class="services">
     
     <section class="init">
-        <div class="backtitle">Servicios</div>
+        {{-- <div class="backtitle">Servicios</div> --}}
         {{-- <div class="background1">
             <div class="gradient left"></div>
             <div class="gradient right"></div>
@@ -15,7 +15,53 @@
         {{-- <div class="background2"></div> --}}
         <div class="title">
             <h1><span class="fill">Servicios</span> <span class="stroke">web</span></h1>    
-        </div>        
+        </div>
+        <div class="boxes">
+            <div class="box design">
+                {{-- <span class="empty_line"></span> --}}
+                <div class="content">
+                    <div class="icon">
+                        <div class="box_svg">
+                            <img src="{{asset('icons/design.svg')}}" alt="">
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>DISEÑO WEB</h3>
+                        <a href="/services#webdesign" class="button"><span class="back"></span><span class="text_btn">Leer Más</span></a>
+                    </div>
+                </div>
+                
+
+            </div>
+            <div class="box development">
+                {{-- <span class="empty_line"></span> --}}
+                <div class="content">
+                    <div class="icon">
+                        <div class="box_svg">
+                            <img src="{{asset('icons/developing.svg')}}" alt="">
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>DESARROLLO WEB</h3>
+                        <a href="/services#webdevelopment" class="button"><span class="back"></span><span class="text_btn">Leer Más</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="box seo">
+                {{-- <span class="empty_line"></span> --}}
+                <div class="content">
+                    <div class="icon">
+                        <div class="box_svg">
+                            <img src="{{asset('icons/optimize_seo.svg')}}" alt="">
+                        </div>
+                    </div>
+                    <div class="title">
+                        <h3>OPTIMIZACIÓN SEO</h3>
+                        <a href="/services1" class="button"><span class="back"></span><span class="text_btn">Leer Más</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
         {{-- <section class="web_design">
             <div class="ctner2 greylight">        
                 <!-- <h3>Servicios de diseño y desarrollo a empresas y particulares</h3> -->
@@ -89,7 +135,7 @@
                 <!-- <p>Un diseño de web inicial atraerá más usuarios</p> -->
             </div>
         </section> --}}
-        <div class="div_tools">
+        {{-- <div class="div_tools">
             <div class="tools carousel_tools">
                 <div class="tool html5"></div>
                 <div class="tool css3"></div>
@@ -105,10 +151,9 @@
                 <div class="tool mongo"></div>
                 <div class="tool git"></div>
                 <div class="tool bootstrap"></div>
-                <div class="tool jquery"></div>
-                {{-- <div class="tool git"></div> --}}
+                <div class="tool jquery"></div>                
             </div>
-        </div>
+        </div> --}}
     </section>
     
     <section class="webdesign " id="webdesign">
@@ -122,7 +167,7 @@
                         <div class="text">
                             <h2>La calidad de una página web puede marcar la diferencia</h2>
                             <p class="mtop20">
-                                Crear un sitio web implica algo más que maquetar un sitio bonito, requiere un diseño enfocado en la experiencia del usuario y adaptado a tus necesidades. Una página web visualmente atractiva que ofrezca una navegación intuitiva y que cumpla tus objetivos impulsando tu idea o marca.
+                                Crear un sitio web implica algo más que un diseño atractivo, requiere un diseño enfocado en la experiencia del usuario y adaptado a tus necesidades. Una página web visualmente atractiva que ofrezca una navegación intuitiva, capaz de cumplir tus objetivos y exponer tu idea.
                             </p>
                         </div>
                     </div>
@@ -172,7 +217,7 @@
                         </div>
                         <h4>Web a medida</h4>
                         <p>
-                            Tu sitio web 100% personalizado y adaptado a una idea o marca más específica. Recomendado para aquellos que desean diferenciarse de la mayoría de páginas basadas en plantillas o diseños genéricos alcanzando una apariencia distinta y original.
+                            Tu sitio web 100% personalizado y adaptado a una idea o marca más específica. Recomendado para aquellos que desean diferenciarse de la mayoría de páginas basadas en plantillas o diseños genéricos alcanzando una apariencia diferente y original.
                         </p>
                     </div>
                 </div>
@@ -235,13 +280,16 @@
         <div class="center70">
             <div class="ctner ">
                 <h2 class="center mtop40 cwhite">Desarrollo web</h2>
-                <div class="center100 py40">
+                <div class="center100 py40 acenter">
                     <div class="detail description">
                         <div class="text">
                             {{-- <h2>Un desarrollo adecuado y optimizado es esencial</h2> --}}
-                            <h2>Un desarrollo de calidad y optimizado es esencial</h2>
-                            <p class="mtop20">                                
-                                Una estructura adecuada, un código optimizado y compatibilidad en los distintos navegadores es algo vital en un sitio web para obtener un excelente rendimiento. Montiweb ofrece desarrollo de software personalizado mediante el uso de frameworks y herramientas basadas en lenguajes de desarrollo web como HTML, CSS, PHP, JavaScript y SQL.
+                            {{-- <h2>Un desarrollo de calidad y optimizado es esencial</h2> --}}
+                            {{-- <h2>Desarrollo de software</h2> --}}
+                            <h2>Potencia tu negocio</h2>
+                            <p class="mtop20">
+                                Descubre como las soluciones tecnológicas pueden optimizar tu sitio web.{{--  Automatización
+                                El desarrollo web se encarga de crear soluciones de software mediante la integración de tecnologías avanzadas y la automatización de procesos. Un buen desarrollo web permite optimizar tu sitio para dispositivos móviles manteniendo un alto nivel de seguridad y un excelente rendimiento. --}} Montiweb ofrece desarrollos de software profesionales y optimizados a través de marcos de trabajo y herramientas basadas en lenguajes de desarrollo web como HTML, CSS, PHP, JavaScript y SQL.
                             </p>
                         </div>
                     </div>
@@ -251,19 +299,39 @@
                         </div>
                     </div>
                 </div>
-                <div class="center100">
+                <div class="list_dev">
+                    <ul>
+                        <li class="icon"><span>SPA</span></li>
+                        <li>Aplicaciones de una sola página</li>
+                        <li class="icon"><span>PWA</span></li>
+                        <li>Aplicaciones Progresivas</li>
+                        <li class="icon"><span>API</span></li>
+                        <li>Interfaz de aplicaciones</li>
+                        <li class="icon"><span>Chat</span></li>
+                        <li>Integración de chat</li>
+                    </ul>
+                    <ul>
+                        <li class="icon"><span>CRM</span></li>
+                        <li>Gestión de clientes</li>
+                        <li class="icon"><span>Migrate</span></li>
+                        <li>Migraciones a una nueva plataforma</li>
+                        <li class="icon"><span>Admin</span></li>
+                        <li>Administración de servidores</li>
+                        <li class="icon"><span>Analytics</span></li>
+                        <li>Herramientas de análisis</li>
+                    </ul>
+                </div>
+                {{-- <div class="center100">
                     <div class="cnt50 spa">
-                        <div class="title">
-                            {{-- <img src="{{asset('icons/angular.svg')}}" alt=""> --}}
+                        <div class="title">                            
                             <h4>SPA</h4>
-                            <p>Aplicación de una sola página</p>
+                            <p>Aplicaciones de una sola página</p>
                         </div>
-                        
                     </div>
                     <div class="cnt50 spa">
                         <div class="title">
-                            <h4>Servidor</h4>
-                            <p>Administración de servidor</p>
+                            <h4>Admin</h4>
+                            <p>Administración de servidores</p>
                         </div>
                         <!--
                             Desarrollo de SPA 
@@ -280,7 +348,7 @@
                     </div>
                     <div class="cnt50 api">
                         <div class="title">
-                            <h4>Migración</h4>
+                            <h4>Migrate</h4>
                             <p>Migración de sitios web a nuevas plataformas</p>
                         </div>
                     </div>
@@ -294,11 +362,11 @@
                     </div>
                     <div class="cnt50 pwa">
                         <div class="title">
-                            <h4>Analíticas</h4>
+                            <h4>Analytics</h4>
                             <p>Configuración de herramientas de analíticas</p>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
         
@@ -315,7 +383,8 @@
                             {{-- <h2>Un desarrollo adecuado y optimizado es esencial</h2> --}}
                             <h2>Impulsa tu presencia online y atrae más visitantes con servicios estratégicos</h2>
                             <p class="mtop20">
-                                Tu sitio web puede ser maravillos pero... ¿Existes?. ¿Deseas más clientes? ¿Más llamadas? Es necesaria una correcta optimización SEO para posicionarte en los buscadores y que la gente te encuentre.
+                                {{-- Tu sitio web puede ser maravillos pero... ¿Existes?. --}}
+                                ¿Te gustaría conseguir más clientes? ¿Más llamadas? Es necesaria una correcta optimización SEO para posicionarte en los buscadores y la gente te encuentre.
                             </p>
                         </div>
                     </div>
@@ -381,7 +450,7 @@
                             <div class="title">
                                 <h5>Análisis</h5>
                             </div>                            
-                            <p>Anallizar el rendimiento de tu sitio web permite decidir estrategias basadas en el comportamiento de tus visitantes</p>
+                            <p>Analizar el rendimiento de tu sitio web permite decidir estrategias basadas en el comportamiento de tus visitantes</p>
                         </div>
                         {{-- <p>Configuración y análisis de rendimiento de tu sitio web</p> --}}
                         

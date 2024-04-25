@@ -74,6 +74,9 @@ main = #161616
     height 80%
 
 /* ALIGN AND MARGINS */
+
+.acenter
+    align-items center
 .center
     text-align center
 .center50
@@ -88,6 +91,8 @@ main = #161616
     height 100%
 .mtop40
     margin-top 40px
+.my40
+    margin:40px 0;
 .mtop20
     margin-top 20px
 .mauto
@@ -101,9 +106,15 @@ main = #161616
 .py40
     padding 40px 0
 
-
+.linear_gradient
+        background linear-gradient(90deg,rgba(17,17,17,0) 0%,rgb(255,255,255) 50%, rgba(17,17,17,0) 100%)
+        height 1px
+        width 392px
+        margin 20px auto
+        
 html
     scroll-behavior smooth
+
 
     /* FIN ALIGN AND MARGINS */
 
@@ -152,5 +163,9 @@ html
 @font-face{
     font-family:Gilroy;
     src: url(../fonts/gilroy/Gilroy-Regular.ttf);
+}
+@font-face{
+    font-family:Livvic;
+    src: url(../fonts/Livvic/Livvic-Medium.ttf);
 }
     /* FIN FONT-FACE */

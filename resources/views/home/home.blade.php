@@ -21,7 +21,7 @@
             </div>
             <div class="cnt50">
                 <h4>Consigue tu web corporativa por <span>499€</span></h4>
-                <div class="cnt80">                    
+                <div class="cnt80 acenter">                    
                     <div style="display:block">
                         <ul>
                             <li><h5>Diseño moderno y atractivo </h5></li>
@@ -35,7 +35,7 @@
                     
                 </div>
                 <div class="button">
-                        <button>Contactar ahora</button>
+                        <button><span>Contactar ahora</span></button>
                     </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
 </section>
 
 
-<section class="web_design">
+{{-- <section class="web_design">
     <div class="ctner2 greylight">        
         <!-- <h3>Servicios de diseño y desarrollo a empresas y particulares</h3> -->
 
@@ -116,47 +116,80 @@
         </ul> -->
         <!-- <p>Un diseño de web inicial atraerá más usuarios</p> -->
     </div>
-</section>
+</section> --}}
 <!-- SECTION DE DESARROLLO WEB (FRONTEND, BACKEND, API REST, CHAT, PWA) -->
 
 <section class="column buildweb">
-    <div class="ctner clippath left">
+    <div class="ctner ">
         {{-- <h4 style="z-index:1;text-align:center" class="cwhite">¿Por qué necesitas una página web?</h4> --}}
-        <h4 style="z-index:1;text-align:center" class="cwhite mtop40">¿Aun no conoces las ventajas de una página web?</h4>
+        <h4 style="z-index:1;text-align:center" class="cwhite mtop40">¿Conoces las ventajas de una página web?</h4>
         {{-- <div class="sct_title title_design">           
         </div> --}}
         <div class="center100 ">
             
             <div class="center70">
-                <div class="cnt50">
-                    <div class="center100 h80">
+                <div class="my40">
+                    <div class="center100">
                         
                         <div class="cnt90">
                             
                             <ul>
                                 <li>
-                                    <span>Información</span> 
-                                    <p>En la actualidad la presencia en línea es fundamental para mostrar información sobre ti o tu negocio</p>
+                                    <div class="advantage">
+                                        <span class="icon">&#x2139;</span>
+                                        <span class="name">Información</span> 
+                                    </div>
+                                    <div class="text">
+                                        <p>En la actualidad es fundamental mostrar información sobre ti o tu negocio </p>
+                                    </div>
                                 </li>
                                 <li>
-                                    <span>Promoción</span>
-                                    <p>Lugar donde promocionar tus productos o servicios</p>
+                                    <div class="advantage">
+                                        <span class="icon"><img src="{{asset('../icons/advantages/speaker.svg')}}" alt="" style="width:25px;height:25px"></span>
+                                        <span class="name">Promoción</span>
+                                    </div>
+                                    <div class="text">                                    
+                                        <p>Lugar donde promocionar tus productos o servicios</p>
+                                    </div>
                                 </li>
                                 <li>
-                                    <span>Coste</span>
-                                    <p> En comparación con otros medios de publicidad es una opción más económica</p>
+                                    <div class="advantage">
+                                        <span class="icon"><img src="{{asset('../icons/advantages/euro.svg')}}" alt=""></span>
+                                        <span class="name">Coste</span>
+                                    </div>
+                                    <div class="text">
+                                        <p> En comparación con otros medios de publicidad es una opción más económica</p>
+                                    </div>
+                                    
+                                    
                                 </li>
                                 <li>
-                                    <span>Disponibilidad</span>
-                                    <p>Disponible las 24 horas los 7 días de la semana</p>
+                                    <div class="advantage">
+                                        <span class="icon"><img src="{{asset('../icons/advantages/earth_24h.svg')}}" alt=""></span>
+                                        <span class="name">Disponibilidad</span>
+                                    </div>
+                                    <div class="text">
+                                        <p>Disponible las 24 horas los 7 días de la semana</p>
+                                    </div>                                    
+                                    
                                 </li>
                                 <li>
-                                    <span>Comunicación</span> 
-                                    <p>Comunicación directa mediante formularios, chats o enlaces a redes sociales</p>
+                                    <div class="advantage">
+                                        <span class="icon"><img src="{{asset('../icons/advantages/chat_dots.svg')}}" alt=""></span>
+                                        <span class="name">Comunicación</span>
+                                    </div>
+                                    <div class="text">
+                                        <p>Comunicación directa mediante formularios, chats o enlaces a redes sociales</p>
+                                    </div>
                                 </li>
                                 <li>
-                                    <span>Accesibilidad</span>
-                                    <p>Es accesible desde cualquier lugar del planeta</p>
+                                    <div class="advantage">
+                                        <span class="icon"><img src="{{asset('../icons/advantages/access.svg')}}" alt=""></span>
+                                        <span class="name">Accesibilidad</span>
+                                    </div>
+                                    <div class="text">
+                                        <p>Es accesible desde cualquier lugar del planeta</p>
+                                    </div>
                                 </li>
                                 
                             </ul>
@@ -169,7 +202,7 @@
                     </div> --}}
                 </div>
             
-            <div class="cnt50 image">
+            {{-- <div class="cnt50 image">
                 <div class="image">
                             
                     <svg id="10015.io" viewBox="0 0 550 550" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill-rule="evenodd" clip-rule="evenodd">
@@ -179,12 +212,7 @@
                         <image href="{{asset('img/website.jpg')}}" alt="" width="100%" height="100%" clip-path="url(#mask)" preserveAspectRatio="xMidYMid slice" x="0" y="60"/>
                     </svg>
                 </div>
-                {{-- <div class="background2" style="width:100%;height:100%">
-
-                </div> --}}
-                {{-- <img src="{{asset('img/website.png')}}" alt="" style="display:flex;margin:auto;width:50%;z-index:2;position:relative" > --}}
-                
-            </div>
+            </div> --}}
         </div>
             {{-- <div class="cnt80">
                 <div class="card black">
@@ -231,18 +259,19 @@
     </div>
 </section>
 <section class="column mw">
-    <div style="background:linear-gradient(90deg,rgba(17,17,17,0) 0%,rgb(255,255,255) 50%, rgba(17,17,17,0) 100%);height:1px;width:392px;margin:20px auto"></div>
+    <div class="linear_gradient"></div>
     <div class="cnt50 mauto " style="padding:20px 0">
-        <p class="cwhite" style="font-weight:400;font-size:20px;line-height:2em;">
-            <span>Montiweb</span> ofrece soluciones digitales a empresas, autónomos y particulares. Ya sea que necesites un nuevo sitio web, añadir una nueva funcionalidad o renovar un sitio existente has llegado al lugar adecuado.
+        <p class="cwhite" >
+            <span>Montiweb</span> ofrece soluciones digitales a empresas, autónomos y particulares. Si necesitas un sitio web para tu nuevo proyecto o una transformación a un sitio existente has llegado al lugar adecuado.
         </p>
     </div>
-    <div style="background:linear-gradient(90deg,rgba(17,17,17,0) 0%,rgb(255,255,255) 50%, rgba(17,17,17,0) 100%);height:1px;width:392px;margin:20px auto"></div>
+    <div class="linear_gradient"></div>
 </section>
 <section class="column features">
-    <div class="ctner black">
+    <div class="ctner">
         <div class="sct_title title_design">            
-            <h4>Todos los sitios incluyen</h4>
+            {{-- <h4>Todos los sitios incluyen</h4> --}}
+            <h4>Descubre las ventajas de Montiweb</h4>
         </div>
         <div class="sct_content">
             <div class="boxes_features" >
@@ -254,14 +283,14 @@
                         <div class="effect_circle"></div>
                     </div>
                     <div class="circle_icon_features">
-                        <div class="icon_feature"></div>
+                        <div class="icon_feature responsive"></div>
                         {{-- <img src="{{asset('icons/responsive.svg')}}" alt="" style="width:32px;height:32px;"> --}}
                     </div>
                     <div class="title_features">
                         <h4>RESPONSIVE</h4>                        
                     </div>
                     <div class="text_features">
-                        <p>Se adapta a cualquier dispositivo, ya sea smartphone o tablet</p>
+                        <p>Adaptable a cualquier dispositivo, ya sea PC, smartphone o tablet</p>
                     </div>
                 </div>
                 
@@ -270,7 +299,7 @@
                         <div class="effect_circle"></div>
                     </div>
                     <div class="circle_icon_features">
-                        <div class="icon_feature"></div>
+                        <div class="icon_feature hosting"></div>
                         {{-- <img src="{{asset('icons/responsive.svg')}}" alt="" style="width:32px;height:32px;"> --}}
                     </div>
                     <div class="title_features">
@@ -287,14 +316,14 @@
                         <div class="effect_circle"></div>
                     </div>
                     <div class="circle_icon_features">
-                        <div class="icon_feature"></div>
+                        <div class="icon_feature protection"></div>
                         {{-- <img src="{{asset('icons/responsive.svg')}}" alt="" style="width:32px;height:32px;"> --}}
                     </div>
                     <div class="title_features">
                         <h4>RGPD</h4>                        
                     </div>
                     <div class="text_features">
-                        <p>Adaptado al reglamento general de protección de datos</p>
+                        <p>Adaptado al Reglamento General de Protección de Datos</p>
                     </div>
                 </div>                
                 
@@ -303,14 +332,14 @@
                         <div class="effect_circle"></div>
                     </div>
                     <div class="circle_icon_features">
-                        <div class="icon_feature"></div>
+                        <div class="icon_feature ssl"></div>
                         {{-- <img src="{{asset('icons/responsive.svg')}}" alt="" style="width:32px;height:32px;"> --}}
                     </div>
                     <div class="title_features">
                         <h4>SSL</h4>                        
                     </div>
                     <div class="text_features">
-                        <p>Certificado SSL estableciendo una comunicación cifrada</p>
+                        <p>Certificado digital SSL</p>
                     </div>
                 </div>
                 <div class="box_features">
@@ -318,7 +347,7 @@
                         <div class="effect_circle"></div>
                     </div>
                     <div class="circle_icon_features">
-                        <div class="icon_feature"></div>
+                        <div class="icon_feature rrss"></div>
                         {{-- <img src="{{asset('icons/responsive.svg')}}" alt="" style="width:32px;height:32px;"> --}}
                     </div>
                     <div class="title_features">
@@ -333,7 +362,7 @@
                         <div class="effect_circle"></div>
                     </div>
                     <div class="circle_icon_features">
-                        <div class="icon_feature"></div>
+                        <div class="icon_feature analytics"></div>
                         {{-- <img src="{{asset('icons/responsive.svg')}}" alt="" style="width:32px;height:32px;"> --}}
                     </div>
                     <div class="title_features">
@@ -348,7 +377,7 @@
                         <div class="effect_circle"></div>
                     </div>
                     <div class="circle_icon_features">
-                        <div class="icon_feature"></div>
+                        <div class="icon_feature lssi"></div>
                         {{-- <img src="{{asset('icons/responsive.svg')}}" alt="" style="width:32px;height:32px;"> --}}
                     </div>
                     <div class="title_features">
@@ -363,14 +392,14 @@
                         <div class="effect_circle"></div>
                     </div>
                     <div class="circle_icon_features">
-                        <div class="icon_feature"></div>
+                        <div class="icon_feature seo"></div>
                         {{-- <img src="{{asset('icons/responsive.svg')}}" alt="" style="width:32px;height:32px;"> --}}
                     </div>
                     <div class="title_features">
                         <h4>SEO</h4>                        
                     </div>
                     <div class="text_features">
-                        <p>Optimización Indexación y posicionamiento y estructura</p>
+                        <p>Optimización SEO OnPage</p>
                     </div>
                 </div>
                 
@@ -378,7 +407,16 @@
         </div>
     </div>
 </section>
-
+<section class="column">
+    <div class="ctner">
+        <div class="backsetup">
+            <div class="backglass">
+                <h3>¿Las soluciones disponibles no satisfacen tus objetivos?</h3>
+                <h3>Necesitas un sitio web <span>personalizado</span></h3>
+            </div>            
+        </div>
+    </div>
+</section>
 <section class="column jobs">
     <div class="ctner3 white">
         <div class="sct_title title_design ">

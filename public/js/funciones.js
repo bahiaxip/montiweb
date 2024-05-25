@@ -17,11 +17,60 @@
     // })
 }) */
 
-function animation(){
+
+/* contact */
+function selectContact(){
+    let selected = document.querySelector('.selected');
+    let optionsContainer = document.querySelector('.options-container');
+    //document.querySelector('.inputBox').classList.add('select');
+
+    let optionsList = document.querySelectorAll('.select-box .option')
+    /* selected.addEventListener('click', (ev) => {
+        console.log("d: ",ev.target.parentNode.parentNode)
+        optionsContainer.classList.toggle('active');
+        ev.target.classList.toggle('active')
+        ev.target.parentNode.parentNode.classList.add('select');
+        
+        
+    }) */
+    optionsList.forEach((option) => {
+        option.addEventListener('click', (ev) => {
+            selected.innerHTML = option.querySelector('label').innerHTML;
+            optionsContainer.classList.remove('active');
+            ev.target.classList.remove('active')
+            
+        })
+    })
+    window.addEventListener('click',(ev) => {
+        if(ev.target == selected){
+            optionsContainer.classList.toggle('active');
+            ev.target.classList.toggle('active')
+            ev.target.parentNode.parentNode.classList.add('select');
+            console.log("existe selected")
+        }else{
+            if(optionsContainer.classList.contains('active')){
+                console.log("tiene active")
+                optionsContainer.classList.remove('active');
+            }
+            console.log("NO existe selected")
+        }
+        console.log("EV: ",ev)
+        /* if(optionsContainer.classList.contains('active')){
+            console.log("tiene active")
+            optionsContainer.classList.remove('active');
+        } */
+        
+        /* optionsContainer.classList.remove('active'); */
+        console.log("nada");
+    })
+}
+
+function animationGsap(){
     const text = document.querySelector('.text.animejs');
     console.log("cargado: ",text);
     
     text.innerHTML = text.textContent.replace(/\S/ig, "<span>$&</span>");
+    //animación del texto inicial con la librería animejs
     anime.timeline({
         loop:false
         })
@@ -42,6 +91,9 @@ function animation(){
         })
         .add({
             begin: function(){
+                //hola() es la función del archivo (bundle.js) que activa la animación de texto secundario que pasa de borroso a claro .
+                //La función hola() se ha envuelto del código después de haber sido compilado el archivo functions.js, que una vez compilado se crea el archivo bundle.js,
+                // esto es necesario para poder ejecutar la función en un momento determinado y no al cargar la página.
                 hola()
             }
         })
@@ -81,10 +133,8 @@ function animation(){
     
 }
 
-function hol(){
-    hola();
-}
 const route = document.getElementsByName('route_name')[0].getAttribute('content');
+let bubbleInterval = null;
 window.addEventListener('load', ()=>{
     // for(let i= 1; i <= 100; i++){{{{
     //     let box = document.createElement('div');
@@ -95,16 +145,87 @@ window.addEventListener('load', ()=>{
     // console.log("cargado")
     console.log("route: ",route)
     if(route == 'home'){
-        animation();
+        animationGsap();
         pruebaRotate();
-        caroussel();
+        //caroussel();
+        animationgsap('home')
     }else if(route == 'services'){
         //caroussel2()
+    }else if(route == 'contact'){
+        //setInterval(stars,10000)
+        //para mantener la compatibilidad del efecto de burbujas y el position sticky del footer es necesario el div_body y dándole estilos con overflow hidden
+        document.querySelector('.div_body').classList.add('hidden');
+        document.querySelector('section.contact').classList.add('transparent');
+        const select = selectContact();
+        window.addEventListener('resize',() => {            
+            clearInterval(bubbleInterval);
+            intervalBubble()            
+        })
+        createBubble();
+        intervalBubble()
     }
     
 })
 
-//función para título de header que va mostrando los servicios de forma
+function intervalBubble(){
+    let totalHeight = document.body.getBoundingClientRect().height;
+    console.log("totalHeight: ",totalHeight)
+    //establecemos medida fija al .div_body para que la burbuja no redimensione cada vez que aparece
+    document.querySelector('.div_body').style.height = totalHeight+'px';    
+    bubbleInterval = setInterval(createBubble,10000);
+}
+//función de creación de burbujas
+function createBubble(){
+    
+    
+    const div_body = document.querySelector('.div_body');
+
+    const main = document.querySelector('main');
+    const createElement = document.createElement('span');
+    createElement.classList.add('bubble');
+    var size = Math.random() * 60;
+    console.log(size)
+
+    let widthElement = 20 + size ;
+    let heightElement = 20 + size ;
+    createElement.style.width = widthElement + 'px';
+    createElement.style.height = heightElement + 'px';
+    //creamos div al span de burbuja
+    let wrapWidthElement = widthElement + 5 +'px';
+    let wrapHeightElement = heightElement + 5 + 'px';
+    let wrap = document.createElement('div');
+    wrap.style.width = wrapWidthElement;
+    wrap.style.height = wrapHeightElement;
+    wrap.classList.add('wrapBubble');
+
+    //conseguimos que las que se salgan del 70% tanto por la izquierda como de la derecha se mantengan en los límites
+    /* let oneWidth = innerWidth / 100;
+    let width80 = oneWidth * 80; */
+    
+    let aleatorio = Math.random() * innerWidth;
+    console.log("aleatorio: ",aleatorio);
+    /* if(aleatorio < oneWidth * 15){
+        console.log("oneWidth * 15 ",oneWidth * 15)
+        console.log("resultado ",oneWidth)
+        aleatorio = oneWidth * 15;
+    }else if(aleatorio > width80){
+        aleatorio = width80;
+    } */
+    
+
+    wrap.style.left = aleatorio + 'px';
+    wrap.appendChild(createElement);
+    div_body.appendChild(wrap);
+    console.log(innerWidth)
+
+    setTimeout(()=> {
+        wrap.remove()
+    },15000)
+
+}
+
+
+//función para título de header que va mostrando los servicios de forma rotatoria
 function pruebaRotate(){
     let words = document.querySelectorAll('.word');
     words.forEach((word) => {
@@ -161,3 +282,4 @@ function moveScroll(sel,type){
     let carousel = document.querySelector('.slider');
     carousel.scrollLeft += 390;
 } */
+

@@ -57,7 +57,7 @@
         <a href="/">Inicio</a>
         <a href="{{route('services')}}" onclick="hola()">Servicios</a>
         <a href="">Blog</a>
-        <a href="">Contacto</a>
+        <a href="{{route('contact')}}">Contacto</a>
     </div>
     <div class="profile">
         <img src="img/logo_montiweb_128.png" alt="" width="35">

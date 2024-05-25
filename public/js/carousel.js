@@ -5,9 +5,6 @@ let firstCardWidth;
 let carousel,timeoutId;
 let divArrows;
 function caroussel(){
-
-
-
     //div carousel
     carousel = document.querySelector('.carousel');
     const arrowBtns = document.querySelectorAll(".sct_content button");
@@ -24,7 +21,6 @@ function caroussel(){
     
     //obtenemos la cantidad de imágenes que entran en el ancho del carousel
     let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
-
 
     // Insert copies of the last few cards to beginning of carousel for infinite scrolling
     //console.log(carouselChildrens.slice(-cardPerView));

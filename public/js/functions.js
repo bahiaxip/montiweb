@@ -1,7 +1,7 @@
 
 const charming = require('charming');
 
-const element = document.querySelector('.subtext');
+const element = document.querySelector('.mw .cnt50 .cwhite');
 
 
 charming(element,{
@@ -12,5 +12,6 @@ charming(element,{
     // setClassName: function(index,elem){
     //     return elem+index;
     // }
+    //
 
 });

@@ -1,0 +1,1 @@
+console.error("Error: Can't walk dependency graph: Cannot find module '/var/www/montiweb/functions.js' from '/var/www/montiweb/_fake.js'\n    required by /var/www/montiweb/_fake.js");

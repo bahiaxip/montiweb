@@ -6,12 +6,13 @@
 @include('layouts.header')
 
 
-<section class="column">
+<section class="column sct_clippath">
     <div class="ctner white clippath right">
         {{-- <div class="sct_title">
             <h4>¿Necesitas un sitio web? <span style="color:#FFF"> ¿Renovar uno existente?</span></h4>            
         </div> --}}
         <div class="center100">
+            <div class="clone"></div>
             <div class="cnt50 image">
                 <div class="background" style="width:100%;height:100%">
 
@@ -19,24 +20,23 @@
                 {{-- <img src="{{asset('img/website.png')}}" alt="" style="display:flex;margin:auto;width:50%;z-index:2;position:relative" > --}}
                 
             </div>
-            <div class="cnt50">
-                <h4>Consigue tu web corporativa por <span>499€</span></h4>
+            <div class="cnt50 offer">
+                <h4 >Consigue tu web corporativa por <span>499€</span></h4>
                 <div class="cnt80 acenter">                    
-                    <div style="display:block">
+                    <div class="list_offer" >
                         <ul>
-                            <li><h5>Diseño moderno y atractivo </h5></li>
-                            <li><h5>Últimas tecnologías</h5></li>
-                            <li><h5>Conexión segura</h5></li>
-                            <li><h5>Adaptable a todos los dispositivos </h5></li>
+                            <li class="one"><h5>Diseño moderno y atractivo </h5></li>
+                            <li class="two"><h5>Últimas tecnologías</h5></li>
+                            <li class="three"><h5>Conexión segura</h5></li>
+                            <li class="four"><h5>Adaptable a todos los dispositivos </h5></li>
                             {{-- <li><h5>Integración en redes sociales </h5></li> --}}
-                            <li><h5>Soporte técnico</h5></li>
+                            <li class="five"><h5>Soporte técnico</h5></li>
                         </ul>
                     </div>
-                    
                 </div>
                 <div class="button">
-                        <button><span>Contactar ahora</span></button>
-                    </div>
+                    <button><span>Contactar ahora</span></button>
+                </div>
             </div>
         </div>
         {{-- <div class="sct_title"></div> --}}
@@ -122,7 +122,7 @@
 <section class="column buildweb">
     <div class="ctner ">
         {{-- <h4 style="z-index:1;text-align:center" class="cwhite">¿Por qué necesitas una página web?</h4> --}}
-        <h4 style="z-index:1;text-align:center" class="cwhite mtop40">¿Conoces las ventajas de una página web?</h4>
+        <h4 class="title_pageweb">¿Conoces las ventajas de una página web?</h4>
         {{-- <div class="sct_title title_design">           
         </div> --}}
         <div class="center100 ">
@@ -132,9 +132,8 @@
                     <div class="center100">
                         
                         <div class="cnt90">
-                            
                             <ul>
-                                <li>
+                                <li class="one">
                                     <div class="advantage">
                                         <span class="icon">&#x2139;</span>
                                         <span class="name">Información</span> 
@@ -143,7 +142,7 @@
                                         <p>En la actualidad es fundamental mostrar información sobre ti o tu negocio </p>
                                     </div>
                                 </li>
-                                <li>
+                                <li class="two">
                                     <div class="advantage">
                                         <span class="icon"><img src="{{asset('../icons/advantages/speaker.svg')}}" alt="" style="width:25px;height:25px"></span>
                                         <span class="name">Promoción</span>
@@ -152,7 +151,7 @@
                                         <p>Lugar donde promocionar tus productos o servicios</p>
                                     </div>
                                 </li>
-                                <li>
+                                <li class="three">
                                     <div class="advantage">
                                         <span class="icon"><img src="{{asset('../icons/advantages/euro.svg')}}" alt=""></span>
                                         <span class="name">Coste</span>
@@ -163,7 +162,7 @@
                                     
                                     
                                 </li>
-                                <li>
+                                <li class="four">
                                     <div class="advantage">
                                         <span class="icon"><img src="{{asset('../icons/advantages/earth_24h.svg')}}" alt=""></span>
                                         <span class="name">Disponibilidad</span>
@@ -173,7 +172,7 @@
                                     </div>                                    
                                     
                                 </li>
-                                <li>
+                                <li class="five">
                                     <div class="advantage">
                                         <span class="icon"><img src="{{asset('../icons/advantages/chat_dots.svg')}}" alt=""></span>
                                         <span class="name">Comunicación</span>
@@ -182,7 +181,7 @@
                                         <p>Comunicación directa mediante formularios, chats o enlaces a redes sociales</p>
                                     </div>
                                 </li>
-                                <li>
+                                <li class="six">
                                     <div class="advantage">
                                         <span class="icon"><img src="{{asset('../icons/advantages/access.svg')}}" alt=""></span>
                                         <span class="name">Accesibilidad</span>
@@ -193,15 +192,9 @@
                                 </li>
                                 
                             </ul>
-                            
-                            
                         </div>
-                    </div>
-                    {{-- <div class="button">
-                        <button>Contactar ahora</button>
-                    </div> --}}
+                    </div>                    
                 </div>
-            
             {{-- <div class="cnt50 image">
                 <div class="image">
                             
@@ -269,13 +262,13 @@
 </section>
 <section class="column features">
     <div class="ctner">
-        <div class="sct_title title_design">            
+        <div class="sct_title ">            
             {{-- <h4>Todos los sitios incluyen</h4> --}}
-            <h4>Descubre las ventajas de Montiweb</h4>
+            <h4 class="title_design">Descubre las ventajas de Montiweb</h4>
         </div>
         <div class="sct_content">
             <div class="boxes_features" >
-                <div class="box_features mtop20">
+                <div class="box_features mtop20 one">
                     <div class="circle_anim_features">
                         <div class="effect_circle"></div>
                     </div>
@@ -294,7 +287,7 @@
                     </div>
                 </div>
                 
-                <div class="box_features">
+                <div class="box_features two">
                     <div class="circle_anim_features">
                         <div class="effect_circle"></div>
                     </div>
@@ -311,7 +304,7 @@
                     
                 </div>
                 
-                <div class="box_features">
+                <div class="box_features three">
                     <div class="circle_anim_features">
                         <div class="effect_circle"></div>
                     </div>
@@ -327,7 +320,7 @@
                     </div>
                 </div>                
                 
-                <div class="box_features">
+                <div class="box_features four">
                     <div class="circle_anim_features">
                         <div class="effect_circle"></div>
                     </div>
@@ -342,7 +335,8 @@
                         <p>Certificado digital SSL</p>
                     </div>
                 </div>
-                <div class="box_features">
+
+                <div class="box_features five">
                     <div class="circle_anim_features">
                         <div class="effect_circle"></div>
                     </div>
@@ -357,7 +351,8 @@
                         <p>Integración de redes sociales</p>
                     </div>
                 </div>
-                <div class="box_features">
+
+                <div class="box_features six">
                     <div class="circle_anim_features">
                         <div class="effect_circle"></div>
                     </div>
@@ -372,7 +367,8 @@
                         <p>Google Analytics</p>
                     </div>
                 </div>
-                <div class="box_features">
+
+                <div class="box_features seven">
                     <div class="circle_anim_features">
                         <div class="effect_circle"></div>
                     </div>
@@ -387,7 +383,8 @@
                         <p>Aviso legal</p>
                     </div>
                 </div>
-                <div class="box_features">
+
+                <div class="box_features eight">
                     <div class="circle_anim_features">
                         <div class="effect_circle"></div>
                     </div>
@@ -554,8 +551,7 @@
     </div>
 </section> --}}
 {{-- <div style="width:100%;height:10px;background-color:white"></div> --}}
-<footer>
-    @include ('layouts.footer')
-</footer>
+
+
 <script src="../js/carousel.js"></script>
 @endsection

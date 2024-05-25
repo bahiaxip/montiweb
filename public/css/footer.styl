@@ -1,22 +1,113 @@
+@import 'variables.styl'
 /* FOOTER */
-footer
-    background-color #000
-    min-height 100px    
-    width 100%
-    height 500px
-    /* position sticky
+footer    
+    /* background-color color20 */
     bottom 0
-    z-index -1 */
-    .credits
-        align-items center
+    display block
+    /* margin auto     */
+    position sticky
+    min-height 350px
+    width 100%
+    z-index 0    
+
+    .footer_top
         display flex
+        justify-content center
         height 100%
-        min-height 100px
-        justify-content space-evenly
+        margin 10px 0
+        min-height 250px
         width 100%
-        p,button
-            border none
-            color #FFF            
-            background-color inherit
-            outline none
-            appearance inherit
+        .footer_links
+            color color25
+            display flex
+            flex-flow row wrap
+            font-family Poppins
+            justify-content space-evenly 
+            padding-top 40px
+            transform translateX(-100%)
+            //transition transform .5s 
+            width 100%
+            h5
+                color color24
+                font-size 20px
+            .montiweb
+                min-width 250px
+                width 20%
+                .logo                    
+                    align-items center
+                    color color24
+                    display flex
+                    
+                    img
+                        bottom 2px
+                        height 32px
+                        position relative
+                        width 32px
+
+                    span
+                        font-family Poppins
+                        font-size 28px
+                        font-weight 600
+                        margin-left 15px
+            .link_services
+                min-width 200px 
+                width 20%
+                a
+                    color color25
+                    transition color 0.3s ease
+                    &:hover
+                        color color18
+                
+            .contact
+                min-width 250px
+                width 20%
+            
+            .work_logos
+                display flex
+                flex-flow row wrap
+                margin 20px 0
+                min-height 50%
+                min-width 250px
+                width 35%
+                
+                .image_logo
+                    margin 10px 0
+                .image_logo.laravel
+                    display flex
+                    flex-direction column
+                    min-width 100px
+                    img
+                        width 80px
+                .image_logo.semrush                    
+                    min-width 170px
+                    display flex
+                    flex-flow column nowrap
+                    justify-content space-around
+                    img
+                        width 150px
+                .image_logo.ga
+                    min-width 160px
+                    img
+                        width 150px
+                
+            ul
+                font-size 18px
+                list-style none
+
+    .footer_bottom
+        min-height 100px
+        /* background-color color20         */
+        .credits
+            align-items center
+            display flex
+            height 100%
+            min-height 100px
+            justify-content space-evenly
+            width 100%
+            p,button
+                border none
+                color #FFF            
+                /* background-color inherit */
+                outline none
+                appearance inherit
+    

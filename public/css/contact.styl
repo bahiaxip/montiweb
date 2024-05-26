@@ -21,7 +21,7 @@
     
 .wrapBubble
     position absolute
-    animation animate2 4s linear infinite alternate-reverse,animate 15s linear
+    animation Bubbleanimate2 4s linear infinite alternate-reverse,Bubbleanimate 15s linear
     z-index 0
     transform  translateX(0)
     top 100%
@@ -52,8 +52,8 @@ section.contact
     background-color color20
     display flex
     flex-direction column
-    justify-content center
     height 100vh
+    justify-content center    
     min-height 720px
     /* overflow hidden */
     position relative
@@ -112,15 +112,16 @@ section.contact
                     width 45%
                     
                     input,textarea,select,select > option
+                        background transparent
                         border none
+                        box-shadow none
                         color color7
+                        font-family Poppins
+                        font-size 18px
+                        height 100%
                         outline none
                         padding 0 10px
                         position absolute
-                        background transparent
-                        box-shadow none
-                        font-size 18px
-                        height 100%
                         width 100%
                         z-index 1
                     select
@@ -163,9 +164,10 @@ section.contact
                         height 100%
                     
                     .select-box
-                        display flex
-                        width 100%
+                        display flex                        
                         flex-direction column
+                        font-family Poppins
+                        width 100%
                         .options-container.active
                             max-height 240px
 
@@ -205,14 +207,14 @@ section.contact
                                 cursor pointer
                                 
                         .selected
-                            color #FFF
+                            color color23
                             cursor pointer
                             order 0
                             padding 12px 24px
                             position relative
                             z-index 1
                        .selected.active
-                            color color18
+                            color #FFF
                 .inputBox.select .line
                     height 100%
                 .inputBox.textarea
@@ -242,7 +244,7 @@ section.contact
     .container .box .inputBox.textarea textarea:valid ~ .line
         height 100%
 
-@keyframes animate
+@keyframes Bubbleanimate
     0%
         top 100%
         
@@ -256,7 +258,7 @@ section.contact
         transform translateY(-150000px)         */
         
 
-@keyframes animate2
+@keyframes Bubbleanimate2
     0%
         transform translateX(-30px)
     100%

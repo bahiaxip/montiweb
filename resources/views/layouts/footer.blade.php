@@ -1,4 +1,4 @@
-<footer>
+<footer @if(Route::currentRouteName() == 'contact') class="contact" @endif>
     <div class="footer_top">
         <div class="center70">
             <div class="footer_links">            

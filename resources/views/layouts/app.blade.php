@@ -25,7 +25,7 @@
             @include('layouts.nav')
             
             @yield('content')
-        </main>
+        </main>        
         @include('layouts.footer')
     </div>
     <script src="{{asset('js/funciones.js')}}"></script>

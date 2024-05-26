@@ -19,6 +19,7 @@
 
 
 /* contact */
+//desplegable en la opción tipo de consulta en la vista de contacto
 function selectContact(){
     let selected = document.querySelector('.selected');
     let optionsContainer = document.querySelector('.options-container');
@@ -30,8 +31,6 @@ function selectContact(){
         optionsContainer.classList.toggle('active');
         ev.target.classList.toggle('active')
         ev.target.parentNode.parentNode.classList.add('select');
-        
-        
     }) */
     optionsList.forEach((option) => {
         option.addEventListener('click', (ev) => {
@@ -44,7 +43,7 @@ function selectContact(){
     window.addEventListener('click',(ev) => {
         if(ev.target == selected){
             optionsContainer.classList.toggle('active');
-            ev.target.classList.toggle('active')
+            ev.target.classList.add('active')
             ev.target.parentNode.parentNode.classList.add('select');
             console.log("existe selected")
         }else{
@@ -54,21 +53,13 @@ function selectContact(){
             }
             console.log("NO existe selected")
         }
-        console.log("EV: ",ev)
-        /* if(optionsContainer.classList.contains('active')){
-            console.log("tiene active")
-            optionsContainer.classList.remove('active');
-        } */
-        
-        /* optionsContainer.classList.remove('active'); */
-        console.log("nada");
+        //console.log("EV: ",ev)
     })
 }
 
 function animationGsap(){
     const text = document.querySelector('.text.animejs');
-    console.log("cargado: ",text);
-    
+    //console.log("cargado: ",text);
     text.innerHTML = text.textContent.replace(/\S/ig, "<span>$&</span>");
     //animación del texto inicial con la librería animejs
     anime.timeline({
@@ -91,46 +82,12 @@ function animationGsap(){
         })
         .add({
             begin: function(){
-                //hola() es la función del archivo (bundle.js) que activa la animación de texto secundario que pasa de borroso a claro .
-                //La función hola() se ha envuelto del código después de haber sido compilado el archivo functions.js, que una vez compilado se crea el archivo bundle.js,
-                // esto es necesario para poder ejecutar la función en un momento determinado y no al cargar la página.
-                hola()
+                //bundle() es la función del archivo (bundle.js) que activa la animación de texto secundario que pasa de borroso a claro .
+                //La función bundle() se ha envuelto del código después de haber sido compilado el archivo functions.js, que una vez compilado se crea el archivo bundle.js,
+                // este nombramiento después de compilar es necesario para poder ejecutar la función en un momento determinado y no al cargar la página.
+                bundle()
             }
         })
-
-        //desaparecer por la izquierda
-        // .add({
-        //     targets:'.text.animejs span',
-        //     translateX:[0, -1000], //[start value, end value]
-        //     scale:[1,1],//[start value, end value]
-        //     opacity:[1,0],//[start value, end value]
-        //     easing:"easeOutExpo",
-        //     duration:2000, //1.5seconds
-        //     delay:anime.stagger(100)
-        // })
-        // //volver a mostrar de forma horizontal
-        // .add({
-        //     targets:'.text.animejs span',
-        //     translateX:[-1000,0], //[start value, end value]
-        //     scale:[1,1],//[start value, end value]
-        //     opacity:[0,1],//[start value, end value]
-        //     easing:"easeOutExpo",
-        //     duration:2000, //1.5seconds
-        //     delay:anime.stagger(100)
-        // })
-        // //volver a desaparecer acercándose a la pantalla
-        // .add({
-        //     targets:'.text.animejs span',
-        //     translateX:[0, 0], //[start value, end value]
-        //     scale:[1,50],//[start value, end value]
-        //     opacity:[1,0],//[start value, end value]
-        //     easing:"easeOutExpo",
-        //     duration:2000, //1.5seconds
-        //     delay:anime.stagger(100)
-        // })
-    
-    
-    
 }
 
 const route = document.getElementsByName('route_name')[0].getAttribute('content');
@@ -163,6 +120,7 @@ window.addEventListener('load', ()=>{
         })
         createBubble();
         intervalBubble()
+        animationgsap('contact')
     }
     
 })

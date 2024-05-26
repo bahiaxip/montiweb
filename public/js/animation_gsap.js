@@ -83,7 +83,6 @@ function animationgsap(page){
                 end:'+=300 top',
                 scrub:1
             }
-            
         })
         //lista de ventajas de web corporativa 
         gsap.to('.clippath.right .list_offer li.one',{
@@ -411,7 +410,10 @@ function animationgsap(page){
         //dibujamos el segundo bloque de elementos
         //tl.to('.box_skills2',{}).call(setIcons('.box_skills2'));
         //gsap.to('.back_skill1')
-    }else if(route="services"){
+    }else if(route == "services"){
+        
+    }else if(route == 'contact'){
+        console.log("animationgsap")
         
     }
 

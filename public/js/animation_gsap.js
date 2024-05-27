@@ -37,6 +37,8 @@ function setIcons(div_parent){
 
 function animationgsap(page){    
     console.log("ruta: ",route)
+    gsap.registerPlugin(ScrollTrigger);
+    var tl = gsap.timeline();
     if(page == 'home'){
 
         //gsap.to('.profile',{y:0,opacity:1,duration:1,delay:2,ease:'power4.out'})
@@ -58,9 +60,8 @@ function animationgsap(page){
         //dividimos en caracteres con splittype
         const title_pageweb = new SplitType('.title_pageweb');
         const title_design = new SplitType('.title_design');
-
-        gsap.registerPlugin(ScrollTrigger);
-        var tl = gsap.timeline();
+        //añadimos el método bundle() que genera un efecto con el subtítulo
+        /* tl.add(bundle,4) */
         //título web corporativa por 499€
         tl.to('.clippath.right h4',{
             opacity:1,
@@ -74,6 +75,7 @@ function animationgsap(page){
                 scrub:1,
             }
         });
+        
         gsap.to('.clippath.right .clone',{
             duration:1,
             "--clip":'59.2% at 92% 50%',
@@ -411,7 +413,16 @@ function animationgsap(page){
         //tl.to('.box_skills2',{}).call(setIcons('.box_skills2'));
         //gsap.to('.back_skill1')
     }else if(route == "services"){
-        
+        /* gsap.to('.clippath.right .clone',{
+            duration:1,
+            "--clip":'59.2% at 92% 50%',
+            scrollTrigger: {
+                trigger:'header',
+                start: '120 top',
+                end:'+=300 top',
+                scrub:1
+            }
+        }) */
     }else if(route == 'contact'){
         console.log("animationgsap")
         

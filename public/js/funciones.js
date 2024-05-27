@@ -61,7 +61,7 @@ function animationGsap(){
     const text = document.querySelector('.text.animejs');
     //console.log("cargado: ",text);
     text.innerHTML = text.textContent.replace(/\S/ig, "<span>$&</span>");
-    //animación del texto inicial con la librería animejs
+    //animación del texto inicial con la librería animejs (se podría replicar con gsap y solo cargar una librería)
     anime.timeline({
         loop:false
         })
@@ -77,15 +77,16 @@ function animationGsap(){
             scale:[10,1],//[start value, end value]
             opacity:[0,1],//[start value, end value]
             easing:"easeOutExpo",
-            duration:1500, //1.5seconds
+            duration:1000, //1.5seconds
             delay:anime.stagger(100)            
-        })
+        })        
         .add({
             begin: function(){
                 //bundle() es la función del archivo (bundle.js) que activa la animación de texto secundario que pasa de borroso a claro .
                 //La función bundle() se ha envuelto del código después de haber sido compilado el archivo functions.js, que una vez compilado se crea el archivo bundle.js,
                 // este nombramiento después de compilar es necesario para poder ejecutar la función en un momento determinado y no al cargar la página.
-                bundle()
+                //bundle()
+                
             }
         })
 }
@@ -103,16 +104,28 @@ window.addEventListener('load', ()=>{
     console.log("route: ",route)
     if(route == 'home'){
         animationGsap();
+        
         pruebaRotate();
+        setTimeout(()=> {
+            
+            document.querySelector('.textrotate').style.opacity=1;
+            document.querySelector('.textrotate').style.transform='translateX(0)';
+            setTimeout( () => {
+                bundle()
+            },2000)
+        },2500)
+        
+        
+        //bundle()
         //caroussel();
         animationgsap('home')
     }else if(route == 'services'){
+        
         //caroussel2()
     }else if(route == 'contact'){
         //setInterval(stars,10000)
         //para mantener la compatibilidad del efecto de burbujas y el position sticky del footer es necesario el div_body y dándole estilos con overflow hidden
-        document.querySelector('.div_body').classList.add('hidden');
-        document.querySelector('section.contact').classList.add('transparent');
+        document.querySelector('.div_body').classList.add('hidden');        
         const select = selectContact();
         window.addEventListener('resize',() => {            
             clearInterval(bubbleInterval);
@@ -222,8 +235,8 @@ function pruebaRotate(){
         currentWordIndex = 
             currentWordIndex === maxWordIndex ? 0 :currentWordIndex + 1;
     }
-    rotateText();
-    setInterval(rotateText,4000)
+    //rotateText();
+    setInterval(rotateText,8000)
 }
 // window.addEventListener('resize', () => {
 //     animation();

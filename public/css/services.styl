@@ -8,6 +8,7 @@
     width 100%
     gap 10px
     flex-flow row wrap
+    perspective 1000px
 
 .services .cnt50 .icon
     display flex
@@ -38,20 +39,28 @@
             position absolute
             opacity .1 */
         /* boxes */
-        .title
+        .main_title
             display flex
-            justify-content: center
-            width 100%
+            justify-content: center            
+            /* opacity 0 */
             padding-top 40px
+            /* transform translateX(-100%) */
+            transition transform 1s ease-in-out, opacity 1s linear
+            width 100%
             z-index 3
             h1
-                color color22
+                color transparent
                 font-size 60px
                 font-family Poppins
                 letter-spacing 2px
                 font-weight 600
+                span.char
+                    display inline-block
                 span.fill
                     color color18
+                    transition color 1s linear 1s
+                span
+                    -webkit-text-stroke 0.5px color18
     
     .boxes
         width 100%
@@ -72,15 +81,17 @@
         .box.seo .icon img
             width 95px
             height 95px
-        .box
-            width 230px
-            height 280px
+        .box            
+            
             background-color #000
             border-radius 8px
-            position relative
-            overflow hidden
             /* box-shadow 0 0 15px color8 */
             box-shadow 0 0 10px color23
+            height 280px            
+            overflow hidden
+            position relative
+            transform scale(0)            
+            width 230px
         .box:hover
             &::before,&::after
                 opacity 1        
@@ -91,6 +102,9 @@
                 img
                     width 40px
                     height 40px
+                svg
+                    height 35px                    
+                    width 35px
             .content .title h3
                 transform translateY(-20px)
             .content .title .button
@@ -151,8 +165,57 @@
                     width 115px
                     height 115px
                     transition all .2s ease .1s
-                    img
+                    img 
                         transition all .2s ease .1s
+                    svg                        
+                        stroke-width 0
+                        transition all .2s ease .1s                        
+                    svg.pathdesign
+                        width 60px
+                        height 60px
+                    svg.pathdev
+                        width 80px
+                        height 80px
+                    svg.pathseo
+                        width 100px
+                        height 100px
+                        /* .path.svg_active */
+                            /* stroke-width 50px */
+                            /* stroke-dashoffset 0px */
+                            /* fill orange */
+                            /* stroke-dasharray 50px */
+                        .path
+                            fill transparent
+                            stroke color18
+                            stroke-width 1px
+                            /* stroke-width 0px */
+                            /* stroke-dashoffset -36px
+                            stroke-dasharray 36px */
+                            /* transition stroke-width 1s linear  1s, stroke-dashoffset 1s linear 1s */
+                            transition stroke-dashoffset 1s linear 1s, stroke-dasharray 1s linear 1s, fill .5s linear 2s, stroke-width .5s linear 2s
+                        .pathdesign .path
+                            stroke-dashoffset -7000px
+                            stroke-dasharray 7000
+                            stroke-width 30px
+                        .pathdesign .path.svg_active
+                            stroke-dashoffset 0px
+                            fill color18
+                            stroke-width 0
+                        .pathdev .path
+                            stroke-dashoffset -36px
+                            stroke-dasharray 36px
+                        .pathdev .path.svg_active
+                            stroke-dashoffset 0px
+                            fill color18
+                            stroke-width 0
+                        .pathseo .path
+                            stroke-dashoffset -103px
+                            stroke-dasharray 103px
+                        .pathseo .path.svg_active
+                            stroke-dashoffset 0px
+                            fill color18
+                            stroke-width 0                            
+
 
             .title            
                 align-items center
@@ -160,7 +223,7 @@
                 flex-direction column
                 height 50%
                 justify-content: space-evenly
-                transform translateY(-20px)
+                transform translateY(-10px)
                 
                 width 100%
                 
@@ -460,21 +523,40 @@
 
     section.webdesign,section.webdevelopment, section.webseo
         padding-top 50px
-    
+        overflow hidden
+        .title_webdesign, .title_webdev, .title_webseo
+            color #FFF
+            margin-top 40px
+            text-align center
+            z-index 1
+            .char
+                opacity 1
+                transform rotateY(90deg)
+                transition transform 0.1s cubic-bezier(0.65, 0.05, 0.36, 1)
+                    
+        .detail.left
+            transform translateX(-100%)
+        .detail.right
+            transform translateX(100%)
         .detail.description
             margin-right -100px
             z-index 2
             background-color #000
             padding 40px
+            transform translateX(-100%)
         .detail.image
             min-height 550px
+            transform translateX(100%)
+        /* .detail.filter */
+
         .detail
             align-items center
-            width 50%
             display flex
             justify-content center
             min-width 400px
+            opacity 0
             user-select none
+            width 50%
         
             .text
                 align-items center
@@ -537,6 +619,9 @@
             padding 15px
             transition all .6s ease
             user-select none
+            transform rotateX(90deg)
+            transform-style preserve-3d
+            transition transform .2s linear
             .icon
                 align-items center
                 display flex
@@ -566,10 +651,13 @@
             img
                 width 100px
                 height 100px
+        
 /* FIN servicio de diseño web */
 
 /* servicio de desarrollo web */
     section.webdevelopment
+        /* .title_webdev */
+
         .list_dev
             display flex
             position relative
@@ -581,6 +669,13 @@
                 padding 0 0 60px 0
                 margin 0
                 list-style none
+                .one,.two,.three,.four,.five,.six,.seven,.eight
+                    opacity 0
+                .one,.two,.three,.four                   
+                    transform translateX(-100%)
+                .five,.six,.seven,.eight
+                    transform translateX(100%)
+
                 li
                     color color22
                     font-weight 600 
@@ -656,12 +751,16 @@
             border-top-left-radius 25px
             border-top-right-radius 25px
             display flex
-            margin-top 20px
-            width 100%
+            margin-top 20px            
             flex-flow row wrap
             justify-content: center
+            overflow hidden
             padding 30px 10px
-            
+            width 100%
+            .featureseo:nth-child(odd)
+                transform translateY(-100%)
+            .featureseo:nth-child(even)
+                transform translateY(100%)
             .featureseo
                 /* background-color:#FFF */
                 /* background-color rgba(0,0,0,.2) */
@@ -673,6 +772,7 @@
                 margin 20px
                 min-width 200px
                 height 230px
+                opacity 0
                 overflow hidden
                 transition all .3s
                 width 300px

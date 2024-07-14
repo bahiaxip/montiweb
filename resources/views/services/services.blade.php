@@ -13,55 +13,10 @@
             <div class="text">Montiweb</div>
         </div> --}}
         {{-- <div class="background2"></div> --}}
-        <div class="title">
+        <div class="main_title">
             <h1><span class="fill">Servicios</span> <span class="stroke">web</span></h1>    
         </div>
-        <div class="boxes">
-            <div class="box design">
-                {{-- <span class="empty_line"></span> --}}
-                <div class="content">
-                    <div class="icon">
-                        <div class="box_svg">
-                            <img src="{{asset('icons/design.svg')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="title">
-                        <h3>DISEÑO WEB</h3>
-                        <a href="/services#webdesign" class="button"><span class="back"></span><span class="text_btn">Leer Más</span></a>
-                    </div>
-                </div>
-                
-
-            </div>
-            <div class="box development">
-                {{-- <span class="empty_line"></span> --}}
-                <div class="content">
-                    <div class="icon">
-                        <div class="box_svg">
-                            <img src="{{asset('icons/developing.svg')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="title">
-                        <h3>DESARROLLO WEB</h3>
-                        <a href="/services#webdevelopment" class="button"><span class="back"></span><span class="text_btn">Leer Más</span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="box seo">
-                {{-- <span class="empty_line"></span> --}}
-                <div class="content">
-                    <div class="icon">
-                        <div class="box_svg">
-                            <img src="{{asset('icons/optimize_seo.svg')}}" alt="">
-                        </div>
-                    </div>
-                    <div class="title">
-                        <h3>OPTIMIZACIÓN SEO</h3>
-                        <a href="/services#webseo" class="button"><span class="back"></span><span class="text_btn">Leer Más</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('services.boxes')
         {{-- <section class="web_design">
             <div class="ctner2 greylight">        
                 <!-- <h3>Servicios de diseño y desarrollo a empresas y particulares</h3> -->
@@ -160,10 +115,10 @@
         <div class="center70">
             <div class="ctner">
                 <div class="title">
-                    <h2 class="center cwhite">Diseño web</h2>
+                    <h2 class="title_webdesign center cwhite">Diseño web</h2>
                 </div>
                 <div class="center100">
-                    <div class="detail">
+                    <div class="detail left">
                         <div class="text">
                             <h2>La calidad de una página web puede marcar la diferencia</h2>
                             <p class="mtop20">
@@ -171,7 +126,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="detail">
+                    <div class="detail right">
                         <div class="image">
                             
                             <svg id="10015.io" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill-rule="evenodd" clip-rule="evenodd">
@@ -278,8 +233,8 @@
     
     <section class="webdevelopment" id="webdevelopment">
         <div class="center70">
-            <div class="ctner ">
-                <h2 class="center mtop40 cwhite">Desarrollo web</h2>
+            <div class="ctner">
+                <h2 class="title_webdev center mtop40 cwhite">Desarrollo web</h2>
                 <div class="center100 py40 acenter">
                     <div class="detail description">
                         <div class="text">
@@ -301,24 +256,43 @@
                 </div>
                 <div class="list_dev">
                     <ul>
-                        <li class="icon"><span>SPA</span></li>
-                        <li>Aplicaciones de una sola página</li>
-                        <li class="icon"><span>PWA</span></li>
-                        <li>Aplicaciones Progresivas</li>
-                        <li class="icon"><span>API</span></li>
-                        <li>Interfaz de aplicaciones</li>
-                        <li class="icon"><span>Chat</span></li>
-                        <li>Integración de chat</li>
+                        <div class="one">
+                            <li class="icon"><span>SPA</span></li>
+                            <li>Aplicaciones de una sola página</li>
+                        </div>
+                        <div class="two">
+                            <li class="icon"><span>PWA</span></li>
+                            <li>Aplicaciones Progresivas</li>
+                        </div>
+                        <div class="three">
+                            <li class="icon"><span>API</span></li>
+                            <li>Interfaz de aplicaciones</li>
+                        </div>
+                        
+                        <div class="four">
+                            <li class="icon"><span>Chat</span></li>
+                            <li>Integración de chat</li>
+                        </div>
                     </ul>
                     <ul>
-                        <li class="icon"><span>CRM</span></li>
-                        <li>Gestión de clientes</li>
-                        <li class="icon"><span>Migrate</span></li>
-                        <li>Migraciones a una nueva plataforma</li>
-                        <li class="icon"><span>Admin</span></li>
-                        <li>Administración de servidores</li>
-                        <li class="icon"><span>Analytics</span></li>
-                        <li>Herramientas de análisis</li>
+                        <div class="five">
+                            <li class="icon"><span>CRM</span></li>
+                            <li>Gestión de clientes</li>
+                        </div>
+                        
+                        <div class="six">
+                            <li class="icon"><span>Migrate</span></li>
+                            <li>Migraciones a una nueva plataforma</li>
+                        </div>
+                        <div class="seven">
+                            <li class="icon"><span>Admin</span></li>
+                            <li>Administración de servidores</li>
+                        </div>
+                        <div class="eight">
+                            <li class="icon"><span>Analytics</span></li>
+                            <li>Herramientas de análisis</li>
+                        </div>
+                        
                     </ul>
                 </div>
                 {{-- <div class="center100">
@@ -376,7 +350,7 @@
         <div class="backbox"></div>
         <div class="center70 ptop50">
             <div class="ctner">
-                <h2 class="center cwhite">Optimización SEO</h2>
+                <h2 class=" title_webseo center cwhite">Optimización SEO</h2>
                 <div class="center100">
                     <div class="detail filter" > 
                         <div class="text">
@@ -393,7 +367,7 @@
                 </div>
                 <div class="features_seo" >
                     
-                        <div class="featureseo">
+                        <div class="featureseo one">
                             <div class="top">
                                 <div class="icon"><img src="../icons/seo/analisis.svg" alt=""></div>
                             </div>
@@ -403,7 +377,7 @@
                             </div>
                             <p>Revisión en profundidad de tu sitio web identificando posibles áreas de mejora</p>                            
                         </div>
-                        <div class="featureseo">
+                        <div class="featureseo two">
                             <div class="top">
                                 <div class="icon">
                                     <img src="../icons/seo/word-wrap.svg" alt="">
@@ -415,7 +389,7 @@
                             
                             <p>Investación avanzada de palabras clave relevantes para tu web</p>
                         </div>
-                        <div class="featureseo">
+                        <div class="featureseo three">
                             <div class="top">
                                 <div class="icon">
                                     <img src="../icons/seo/code.svg" alt="">
@@ -430,7 +404,7 @@
                         
                         {{-- <p>Análisis de competencia</p>
                         <p>Análisis de competencia directa</p> --}}
-                        <div class="featureseo">
+                        <div class="featureseo four">
                             <div class="top">
                                 <div class="icon">
                                     <img src="../icons/seo/seo_onpage.svg" alt="">
@@ -441,7 +415,7 @@
                             </div>
                             <p>Optimización de estructura y contenido obteniendo una indexación adecuada para los motores de búsqueda</p>
                         </div>
-                        <div class="featureseo">
+                        <div class="featureseo five">
                             <div class="top">
                                 <div class="icon">
                                     <img src="../icons/seo/seo_performance.svg" alt="">
@@ -455,7 +429,7 @@
                         {{-- <p>Configuración y análisis de rendimiento de tu sitio web</p> --}}
                         
                         {{-- <p>Herramientas</p> --}}
-                        <div class="featureseo">
+                        <div class="featureseo six">
                             <div class="top">
                                 <div class="icon">
                                     <img src="../icons/seo/seo_local.svg" alt="">
@@ -467,9 +441,6 @@
                             
                             <p>Optimización para motores de búsqueda a través de factores de proximidad</p>
                         </div>
-                        
-                    
-                    
                 </div>
                 
             </div>

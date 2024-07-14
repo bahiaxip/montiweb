@@ -27,7 +27,10 @@
     </div> --}}
     {{-- <div class="back"></div> --}}
     <div class="title">
-        <h1><span class="fill">Contacto</span> {{-- <span class="stroke">web</span> --}}</h1>    
+        <!--
+            <h1><span {{-- class="fill" --}}>Contacto</span> {{-- <span class="stroke">web</span> --}}</h1>    
+        -->
+        <h1>Contacto</h1>    
     </div>
     <div class="container">
         

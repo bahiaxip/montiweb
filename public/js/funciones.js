@@ -57,11 +57,12 @@ function selectContact(){
     })
 }
 
+//animación del texto inicial con la librería animejs (se podría replicar con gsap y solo cargar una librería)
 function animationGsap(){
     const text = document.querySelector('.text.animejs');
     //console.log("cargado: ",text);
     text.innerHTML = text.textContent.replace(/\S/ig, "<span>$&</span>");
-    //animación del texto inicial con la librería animejs (se podría replicar con gsap y solo cargar una librería)
+    
     anime.timeline({
         loop:false
         })
@@ -93,6 +94,7 @@ function animationGsap(){
 
 const route = document.getElementsByName('route_name')[0].getAttribute('content');
 let bubbleInterval = null;
+let mwChars = null;
 window.addEventListener('load', ()=>{
     // for(let i= 1; i <= 100; i++){{{{
     //     let box = document.createElement('div');
@@ -103,9 +105,9 @@ window.addEventListener('load', ()=>{
     // console.log("cargado")
     console.log("route: ",route)
     if(route == 'home'){
-        animationGsap();
-        
+        animationGsap();        
         pruebaRotate();
+
         setTimeout(()=> {
             
             document.querySelector('.textrotate').style.opacity=1;
@@ -118,9 +120,12 @@ window.addEventListener('load', ()=>{
         
         //bundle()
         //caroussel();
-        animationgsap('home')
+        animationgsap(route)
+        cursorCards()
+        //anulado
+        //disolvText()
     }else if(route == 'services'){
-        
+        animationgsap(route)
         //caroussel2()
     }else if(route == 'contact'){
         //setInterval(stars,10000)
@@ -138,6 +143,63 @@ window.addEventListener('load', ()=>{
     
 })
 
+function disolvText(){
+    
+    let mwText = document.querySelector('.column.mw p');
+    let listMwText = mwText.innerText.split("");
+    console.log(listMwText);
+    html = "";
+    for(var i=0;i<listMwText.length;i++){
+        if(listMwText[i] !== " "){
+            html += '<div style="position:relative;display:inline-block;">'+listMwText[i]+'</div>';
+        }else{
+            html += listMwText[i];
+        }
+    }
+    mwText.innerHTML = html;
+    mwChars = mwText.getElementsByTagName("div");
+    console.log("mwChars: ",mwChars)
+    
+    
+    /* var tl = gsap.timeline({
+        repeat:0,
+        //repeatDelay: 1,
+        //yoyo: true
+    })
+    tl.set('.mw_text',{perspective:400});
+
+    tl.from(chars,{
+        duration:1.5,
+        opacity:0,
+        x:gsap.utils.random(-300,300,true),
+        y:gsap.utils.random(50,300,true),
+        z:gsap.utils.random(0,300,true),
+        rotate:gsap.utils.random(-90,90,true),
+        scale:.1,
+        stagger:{
+            amount:3
+        },
+    }) */
+
+}
+
+
+function cursorCards(){
+    document.getElementById('ul').onmousemove = e => {
+        for(const card of document.getElementsByClassName('li')){
+            const rect = card.getBoundingClientRect(),
+                x = e.clientX - rect.left,
+                y = e.clientY - rect.top;
+    
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+            card.querySelector('p').style.setProperty('--mouse-x', `${x}px`);
+        }
+    }
+    
+}
+
+//intervalos de burbujas en la vista contact
 function intervalBubble(){
     let totalHeight = document.body.getBoundingClientRect().height;
     console.log("totalHeight: ",totalHeight)

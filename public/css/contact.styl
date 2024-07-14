@@ -63,13 +63,24 @@ section.contact
         padding-top 40px
         z-index 3
         h1
-            color color22
+            
             font-size 60px
             font-family Poppins
             letter-spacing 2px
             font-weight 600
+            overflow hidden
+            color transparent
+            span.char
+                display inline-block
+            span
+                
+                /* text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+                1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;    */
+                -webkit-text-stroke 0.5px color18
+
             span.fill
                 color color18
+                transition color 1s linear 1s
     
     
         
@@ -79,13 +90,13 @@ section.contact
         /* border color21 1px solid */
         border-radius 20px
         /* box-shadow 0 0 22px color21 */
-
-        margin-top 60px
-        position relative
         height 60vh
-        min-height 500px
-        width 70%
+        margin-top 60px
         max-width 1000px
+        min-height 500px
+        opacity 0
+        position relative
+        width 70%
         z-index 3
     
         .box
@@ -164,6 +175,7 @@ section.contact
                         display flex                        
                         flex-direction column
                         font-family Poppins
+                        font-size 18px
                         width 100%
                         .options-container.active
                             max-height 240px

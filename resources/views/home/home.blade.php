@@ -132,62 +132,79 @@
                     <div class="center100">
                         
                         <div class="cnt90">
-                            <ul>
-                                <li class="one">
-                                    <div class="advantage">
-                                        <span class="icon">&#x2139;</span>
-                                        <span class="name">Información</span> 
-                                    </div>
-                                    <div class="text">
-                                        <p>En la actualidad es fundamental mostrar información sobre ti o tu negocio </p>
-                                    </div>
-                                </li>
-                                <li class="two">
-                                    <div class="advantage">
-                                        <span class="icon"><img src="{{asset('../icons/advantages/speaker.svg')}}" alt="" style="width:25px;height:25px"></span>
-                                        <span class="name">Promoción</span>
-                                    </div>
-                                    <div class="text">                                    
-                                        <p>Lugar donde promocionar tus productos o servicios</p>
+                            <ul id="ul">
+                                <li class=" li one">
+                                    <div class="card-border"></div>
+                                    <div class="content">
+                                        <div class="advantage">
+                                            <span class="icon">&#x2139;</span>
+                                            <span class="name">Información</span> 
+                                        </div>
+                                        <div class="text">
+                                            <p>En la actualidad es fundamental mostrar información sobre ti o tu negocio </p>
+                                        </div>
                                     </div>
                                 </li>
-                                <li class="three">
-                                    <div class="advantage">
-                                        <span class="icon"><img src="{{asset('../icons/advantages/euro.svg')}}" alt=""></span>
-                                        <span class="name">Coste</span>
+                                <li class=" li two">
+                                    <div class="card-border"></div>
+                                    <div class="content">
+                                        <div class="advantage">
+                                            <span class="icon"><img src="{{asset('../icons/advantages/speaker.svg')}}" alt="" style="width:25px;height:25px"></span>
+                                            <span class="name">Promoción</span>
+                                        </div>
+                                        <div class="text">                                    
+                                            <p>Lugar donde promocionar tus productos o servicios</p>
+                                        </div>
                                     </div>
-                                    <div class="text">
-                                        <p> En comparación con otros medios de publicidad es una opción más económica</p>
+                                </li>
+                                <li class=" li three">
+                                    <div class="card-border"></div>
+                                    <div class="content">
+                                        <div class="advantage">
+                                            <span class="icon"><img src="{{asset('../icons/advantages/euro.svg')}}" alt=""></span>
+                                            <span class="name">Coste</span>
+                                        </div>
+                                        <div class="text">
+                                            <p> En comparación con otros medios de publicidad es una opción más económica</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="li four">
+                                    <div class="card-border"></div>
+                                    <div class="content">
+                                        <div class="advantage">
+                                            <span class="icon"><img src="{{asset('../icons/advantages/earth_24h.svg')}}" alt=""></span>
+                                            <span class="name">Disponibilidad</span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Disponible las 24 horas los 7 días de la semana</p>
+                                        </div>
                                     </div>
                                     
-                                    
                                 </li>
-                                <li class="four">
-                                    <div class="advantage">
-                                        <span class="icon"><img src="{{asset('../icons/advantages/earth_24h.svg')}}" alt=""></span>
-                                        <span class="name">Disponibilidad</span>
-                                    </div>
-                                    <div class="text">
-                                        <p>Disponible las 24 horas los 7 días de la semana</p>
-                                    </div>                                    
-                                    
-                                </li>
-                                <li class="five">
-                                    <div class="advantage">
-                                        <span class="icon"><img src="{{asset('../icons/advantages/chat_dots.svg')}}" alt=""></span>
-                                        <span class="name">Comunicación</span>
-                                    </div>
-                                    <div class="text">
-                                        <p>Comunicación directa mediante formularios, chats o enlaces a redes sociales</p>
+                                <li class="li five">
+                                    <div class="card-border"></div>
+                                    <div class="content">
+                                        <div class="advantage">
+                                            <span class="icon"><img src="{{asset('../icons/advantages/chat_dots.svg')}}" alt=""></span>
+                                            <span class="name">Comunicación</span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Comunicación directa mediante formularios, chats o enlaces a redes sociales</p>
+                                        </div>
                                     </div>
                                 </li>
-                                <li class="six">
-                                    <div class="advantage">
-                                        <span class="icon"><img src="{{asset('../icons/advantages/access.svg')}}" alt=""></span>
-                                        <span class="name">Accesibilidad</span>
-                                    </div>
-                                    <div class="text">
-                                        <p>Es accesible desde cualquier lugar del planeta</p>
+                                <li class="li six">
+                                    <div class="card-border"></div>
+                                    <div class="content">
+                                        <div class="advantage">
+                                            <span class="icon"><img src="{{asset('../icons/advantages/access.svg')}}" alt=""></span>
+                                            <span class="name">Accesibilidad</span>
+                                        </div>
+                                        <div class="text">
+                                            <p>Es accesible desde cualquier lugar del planeta</p>
+                                        </div>
                                     </div>
                                 </li>
                                 
@@ -254,7 +271,7 @@
 <section class="column mw">
     <div class="linear_gradient"></div>
     <div class="cnt50 mauto " style="padding:20px 0">
-        <p class="cwhite" >
+        <p class="cwhite mw_text" >
             <span>Montiweb</span> ofrece soluciones digitales a empresas, autónomos y particulares. Si necesitas un sitio web para tu nuevo proyecto o una transformación a un sitio existente has llegado al lugar adecuado.
         </p>
     </div>
